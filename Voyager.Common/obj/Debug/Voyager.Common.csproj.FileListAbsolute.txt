@@ -1,0 +1,5 @@
+C:\Projects\Voyager\Voyager.Common\bin\Debug\Voyager.Common.dll
+C:\Projects\Voyager\Voyager.Common\bin\Debug\Voyager.Common.pdb
+C:\Projects\Voyager\Voyager.Common\obj\Debug\Voyager.Common.csprojResolveAssemblyReference.cache
+C:\Projects\Voyager\Voyager.Common\obj\Debug\Voyager.Common.dll
+C:\Projects\Voyager\Voyager.Common\obj\Debug\Voyager.Common.pdb
