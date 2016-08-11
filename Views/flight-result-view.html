@@ -1,0 +1,350 @@
+<section class="sec-pads gray" ng-controller="SearchController">
+    <div class="container">
+        <div class="row">
+            <aside class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <div class="search-filters clearfix">
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="input-group">
+                            <select id="ddlPrice" class="selectpicker custom-select" data-style="btn-inverse" ng-change="sortResult('ddlPrice')" ng-model="ddlPrice">
+                                <option value="">Price</option>
+                                <option value="asc">Low to High</option>
+                                <option value="dsc">High to Low</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="input-group">
+
+                            <select class="selectpicker custom-select" data-style="btn-inverse">
+                                <option>Airline</option>
+                                <option>Emirates</option>
+                                <option>Air Canada</option>
+                                <option>American Ailrine</option>
+                                <option>Malaysia Ailrine</option>
+                            </select>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="input-group">
+
+                            <select class="selectpicker custom-select" data-style="btn-inverse">
+                                <option>Star Ratings</option>
+                                <option>Low to High</option>
+                                <option>High to Low</option>
+                            </select>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="input-group">
+
+                            <select class="selectpicker custom-select" data-style="btn-inverse" id="ddlName" ng-change="sortResult('ddlName')" ng-model="ddlName">
+                                <option value="">Name</option>
+                                <option value="asc">Ascending</option>
+                                <option value="dsc">Descending</option>
+                            </select>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="results-counts">
+                    <h4 class="upper">{{searchResultCount}} results found</h4>
+
+                </div>
+
+                <div class="search-results" ng-repeat="itinerary in searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary | orderBy:sort:reverse">
+                    <div class="air-box clearfix" ng-if="travelInfo.oneway">
+
+                        <table class="col-lg-10 col-md-12">
+                            <tr ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments">
+                                <!--<tr  ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption[1].FlightSegments">-->
+                                <td class="airline-intro col-lg-2 col-md-12">
+                                    <ul>
+                                        <li><img src="{{getLogo(flightSegment.MarketingAirline.Code)}}" alt="airline-logo"></li>
+                                        <li><h5 class="upper">{{flightSegment.MarketingAirline.value}}</h5></li>
+
+                                        <!--<li class="ratings">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                        </li>-->
+                                    </ul>
+                                </td>
+                                <td class="col-lg-4 col-md-6 airline-details">
+                                    <div class="take-off"><i class="fa fa-plane"></i> Take Off</div>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>{{flightSegment.DepartureDateTime|flightTime}}</li>
+                                        <li><i class="fa fa-map-marker"></i> {{flightSegment.DepartureAirport.value.split(',')[0]}}</li>
+                                        <!--<li>
+                            <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
+                            Hours
+                        </li>-->
+                                    </ul>
+                                </td>
+                                <td class="col-lg-4 col-md-6  airline-details">
+                                    <div class="landing"><i class="fa fa-plane fa-rotate-90"></i> Landing</div>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o "></i>{{flightSegment.ArrivalDateTime|flightTime}}</li>
+                                        <li><i class="fa fa-map-marker"></i>{{flightSegment.ArrivalAirport.value.split(',')[0]}}</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="col-lg-2 col-md-12 booking-info">
+                            <ul>
+                                <li class="air-price">{{itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.CurrencyCode}} {{itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount}}</li>
+                                <li class="air-details"><a href="" ng-click="getSetMap()">Details</a></li>
+                                <li class="air-booking"><a href="">Book Now</a></li>
+                                <li><i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}})<!--:{{itinerary.SequenceNumber}} Hours--></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pages">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <aside class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <!--Filter Header-->
+                <div class="filters-header aside-bg">
+
+                    <h4 class="upper white">Filter your Search</h4>
+
+                    <div class="sep-green"></div>
+
+                </div>
+
+                <!--Filter by Price-->
+                <div class="filter-container aside-bg ">
+                    <div class="price-filter">
+                        <label for="desc" class="custom-lable">Price range</label>
+                        <div class="price">
+                            <div id="price"></div>
+                            <input type="text" id="amount" name="amount" readonly class="less">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Filter Hotel-->
+                <div class="filter-container aside-bg">
+                    <div class="hotel-name">
+                        <div class="custom-margin">
+                            <label class="custom-lable">Search by Airline Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control custom-control" placeholder="Airline Name"
+                                        aria-describedby="basic-addon2">
+                                <span class="input-group-addon">
+                                    <img src="images/icon-flight2.png"
+                                            alt="flights">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Filter by Trip-->
+                <div class="filter-container aside-bg">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn">
+                            <input type="radio" name='q2' ng-model="travelInfo.oneway" ng-value="false">
+                            <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> Round Trip
+                        </label>
+                    </div>
+
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn">
+                            <input type="radio" name='q2' ng-model="travelInfo.oneway" ng-value="true">
+                            <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> One Way
+                        </label>
+                    </div>
+
+                </div>
+
+                <!--Filter by Class-->
+                <div class="filter-container aside-bg">
+                    <div class="class-name">
+                        <label class="custom-lable">Class </label>
+                        <div class="">
+                            <div class="checkbox">
+                                <ul class="my-checks">
+                                    <li>
+                                        <label class="custom-lable">
+                                            Economy
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-lable">
+                                            Stnadard
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-lable">
+                                            Business
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Filter By Airlines-->
+                <div class="filter-container aside-bg">
+                    <div class="airline-name">
+                        <label class="custom-lable">Airlines </label>
+                        <div class="">
+                            <div class="checkbox">
+                                <ul class="my-checks">
+                                    <li>
+                                        <label class="custom-lable">
+                                            Emirates
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-lable">
+                                            Spicejet
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-lable">
+                                            AirJet
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-lable">
+                                            Indigo
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Filter by Airline facilities-->
+                <div class="filter-container aside-bg">
+                    <div class="airline-facilities">
+                        <label class="custom-lable">Airline Facilities</label>
+                        <div class="checkbox">
+                            <ul class="my-checks facilities">
+                                <li>
+                                    <label class="custom-lable">
+                                        <i class="fa fa-wifi"></i> Wifi
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="custom-lable">
+                                        <i class="fa fa-beer"></i> Bar
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="custom-lable">
+                                        <i class="fa fa-car"></i> Transport
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Filter by Hotel Facilities-->
+                <div class="filter-container aside-bg">
+                    <div class="hotel-facilities">
+                        <label class="custom-lable">Airline Ratings</label>
+                        <div class="checkbox">
+                            <ul class="my-checks ratings">
+                                <li>
+                                    <label>
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-star"></i>
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>

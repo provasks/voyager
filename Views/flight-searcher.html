@@ -1,0 +1,114 @@
+<section class="inner-search-page-flights" ng-controller="SearchController">
+    <form name="frmSearch" id="frmSearch">
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center upper white">FIND YOUR PERFECT Airline</h3>
+
+                <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <label class="custom-lable">Flying From</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control custom-control" id="txtFlyFrom"
+                               ng-model="travelInfo.flyFrom" ng-model-options="{debounce: 1000}"
+                               list="fromAirports" ng-change="getFromAirports(travelInfo.flyFrom)"
+                               placeholder="City or Airport Name" aria-describedby="basic-addon2" />
+                        <span class="input-group-addon">
+                            <img src="images/icon-flight2.png" alt="flights" />
+                        </span>
+                        <datalist id="fromAirports">
+                            <!--<select ng-model='airport.iata' ng-options='airport.iata as airport.iata for (airport.iata,airport.country) in airports'></select>-->
+                            <option ng-repeat="airport in travelInfo.fromAirports" value="{{airport.code}}">{{airport.name + ',' + airport.country_name}}</option>
+                        </datalist>
+
+                    </div>
+                </div>
+
+                <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <label class="custom-lable">Flying to</label>
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control custom-control" id="txtFlyTo"
+                               ng-model="travelInfo.flyTo" ng-model-options="{debounce: 1000}"
+                               list="toAirports" ng-change="getToAirports(travelInfo.flyTo)"
+                               placeholder="City or Airport Name" aria-describedby="basic-addon2" />
+                        <span class="input-group-addon">
+                            <img src="images/icon-flight2.png" alt="flights" />
+                        </span>
+                        <datalist id="toAirports">
+                            <!--<select ng-model='airport.iata' ng-options='airport.iata as airport.iata for (airport.iata,airport.country) in airports'></select>-->
+                            <option ng-repeat="airport in travelInfo.toAirports" value="{{airport.code}}">{{airport.name + ',' + airport.country_name}}</option>
+                        </datalist>
+                    </div>
+                </div>
+
+
+                <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <label class="custom-lable">Departure </label>
+
+                    <div class="input-group">
+                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="departure" ng-model="travelInfo.departureDate">
+
+                        <!--<input type="text" placeholder="Select Date" class="form-control custom-control" id="departure" ng-model="travelInfo.departureDate">-->
+                        <!--<span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>-->
+
+                    </div>
+                </div>
+
+                <div class="custom-margin  col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <label class="custom-lable">Arrival </label>
+
+                    <div class="input-group">
+                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="rturning" ng-model="travelInfo.returnDate">
+                        <!--<input type="text" placeholder="Select Date" class="form-control custom-control" id="returning">-->
+                        <!--<span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>-->
+
+                    </div>
+                </div>
+
+
+                <div class="custom-margin col-lg-1 col-md-1 col-sm-2 col-xs-12">
+                    <label class="custom-lable">Adults </label>
+
+                    <div class="input-group">
+                        <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.adult" />
+                        <!--<select class="selectpicker custom-select" data-style="btn-inverse" ng-model="travelInfo.adult">
+                            <option>00</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>-->
+
+
+                    </div>
+                </div>
+
+                <div class="custom-margin col-lg-1 col-md-1 col-sm-2 col-xs-12">
+                    <label class="custom-lable">Kids </label>
+
+                    <div class="input-group">
+                        <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.child" />
+                        <!--<select class="selectpicker custom-select" data-style="btn-inverse" ng-model="travelInfo.child">
+                            <option>00</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>-->
+
+
+                    </div>
+                </div>
+
+
+                <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
+
+                    <button ng-click="searchFlight()" class="btn-green custom-margin2 ">Search Now</button>
+
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+</section>

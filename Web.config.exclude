@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <system.web>
+    <customErrors mode="Off" defaultRedirect="Error.aspx"/>
+    <compilation debug="true" targetFramework="4.0"/>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID"/>
+    <webServices>
+      <protocols>
+        <add name="HttpGet" />
+        <add name="HttpPostLocalhost"/>
+        <add name="HttpPost" />
+        
+      </protocols>
+    </webServices>
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false"/>
+    </httpHandlers>
+
+  </system.web>
+  <system.serviceModel>
+    <bindings/>
+    <client/>
+  </system.serviceModel>
+</configuration>

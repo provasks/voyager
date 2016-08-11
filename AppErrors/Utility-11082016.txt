@@ -1,0 +1,5 @@
+
+At 07:51:58
+In the Method: System.String GetConfigValue(System.String)
+Message: Object reference not set to an instance of an object.
+StackTrace:    at Voyager.Common.Utility.GetConfigValue(String key) in c:\Projects\Voyager\Voyager.Common\Utility.cs:line 16.txt

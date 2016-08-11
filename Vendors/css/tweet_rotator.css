@@ -1,0 +1,111 @@
+.cbp-qtrotator {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+
+}
+
+.cbp-qtrotator .cbp-qtcontent {
+    position: absolute;
+    min-height: 60px;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    width: 100%;
+    padding: 10px 0px;
+
+}
+
+.no-js .cbp-qtrotator .cbp-qtcontent {
+    border-bottom: none;
+}
+
+.cbp-qtrotator .cbp-qtcontent.cbp-qtcurrent,
+.no-js .cbp-qtrotator .cbp-qtcontent {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.cbp-qtrotator .cbp-qtcontent:before,
+.cbp-qtrotator .cbp-qtcontent:after {
+    content: " ";
+    display: table;
+}
+
+.cbp-qtrotator .cbp-qtcontent:after {
+    clear: both;
+}
+
+.cbp-qtprogress {
+    position: absolute;
+    background: #f1614e !important;
+    height: 1px;
+    width: 0%;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.cbp-qtrotator blockquote {
+    margin: 0;
+    padding: 0px;
+    border: none !important;
+
+}
+
+.cbp-qtrotator blockquote p {
+    font-size: 14px;
+    color: #fff !important;
+    font-weight: 500;
+    line-height: 20px !important;
+
+}
+
+.cbp-qtrotator blockquote p a {
+    font-size: 14px;
+    color: #fff !important;
+    font-weight: 500;
+    line-height: 20px !important;
+
+}
+
+.cbp-qtrotator blockquote p span {
+    font-size: 14px;
+    color: #93d8ff !important;
+    font-weight: 500;
+    line-height: 20px !important;
+
+}
+
+.tweeter {
+    font-size: 13px;
+    color: #fff;
+    padding: 12px 0px;
+}
+
+/*.cbp-qtrotator blockquote footer:before {
+	content: '― ';
+}*/
+
+.cbp-qtrotator .cbp-qtcontent img {
+    float: right;
+    margin-left: 3em;
+    display: none;
+}
+
+/* Example for media query */
+@media screen and (max-width: 30.6em) {
+
+    .cbp-qtrotator {
+        font-size: 50%;
+
+    }
+
+    .cbp-qtrotator img {
+        width: 80px;
+    }
+
+}

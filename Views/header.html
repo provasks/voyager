@@ -1,0 +1,45 @@
+<header id="bar">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-6"><a href="#/home"><img src="images/logo.png"></a></div>
+            <div class="menu col-lg-9 col-md-9 col-sm-9 col-xs-6">
+                <nav id="nav-wrap">
+                    <ul class="sf-menu">
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="">About</a>
+                            <ul>
+                                <li><a href="#/company">The Company</a></li>
+                                <li><a href="#/team">Our Team</a></li>
+                                <li><a href="#/director">The Directors</a></li>
+                                <li><a href="#/clients">Our Clients</a></li>
+                            </ul>
+                        <li><a href="#/services">Services </a></li>
+                        <li><a href="#/corporate">Corporate Travels</a></li>
+                        <li><a href="#/partners">Partners</a></li>
+                        <li><a href="#/contact"> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<script>
+$('#bar').scrollFix();
+
+
+	jQuery(document).ready(function($){
+                        jQuery('ul.sf-menu').superfish();
+						      
+                        /* prepend menu icon */
+                        jQuery('#nav-wrap').prepend('<div id="menu-icon"></div>');
+                        //alert ('test');
+                        /* toggle nav */
+                        $("#menu-icon").on("click", function(){
+                                jQuery(".sf-menu").slideToggle();
+                                jQuery(this).toggleClass("active");
+                        });
+                });
+		
+</script>
