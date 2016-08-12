@@ -17,7 +17,7 @@
     void Application_Error(object sender, EventArgs e) 
     {
         Exception exc = Server.GetLastError();
-        Voyager.Common.Logger.LogException(e);
+        Voyager.Common.Logger.LogException(exc);
 
     }
 

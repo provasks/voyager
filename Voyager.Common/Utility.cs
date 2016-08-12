@@ -13,12 +13,12 @@ namespace Voyager.Common
         {
             try
             {
-                return ConfigurationManager.AppSettings["key"].ToString();
+                return ConfigurationManager.AppSettings[key].ToString();
             }
             catch (Exception ex)
             {
-                Logger.LogException(this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod(), ex);
-               // Logger.LogMessage(this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod(), "HEllo");
+                Exception exception = new Exception(string.Format("The key {0} not found in the web.config",key));
+                Logger.LogException(this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod(), exception);
                 return null;
             }
         }

@@ -175,8 +175,7 @@ public class SearchService : System.Web.Services.WebService
     public string GetAirports(string url, string keyword)
     {
 
-        string api_key = utils.GetConfigValue("api-key");
-       // string api_key = "6b7a63cb-a52c-4428-9588-2f87c1d0b8f0";
+        string api_key = utils.GetConfigValue("iata-api-key");
         url = url + "api_key="+ api_key + "&query=" + keyword;
         return DoWebRequest(url,"GET");
     }
