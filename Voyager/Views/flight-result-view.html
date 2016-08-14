@@ -17,14 +17,18 @@
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
-
-                            <select class="selectpicker custom-select" data-style="btn-inverse">
+                            <select class="selectpicker custom-select" data-style="btn-inverse"
+                                    ng-model="airline" ng-options="airline.value for airline in filteredResult.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.MarketingAirline">
+                                <!--<option value="0">Default</option>-->
+                                <!--// unique options from the categories-->
+                            </select>
+                            <!--<select class="selectpicker custom-select" data-style="btn-inverse">
                                 <option>Airline</option>
                                 <option>Emirates</option>
                                 <option>Air Canada</option>
                                 <option>American Ailrine</option>
                                 <option>Malaysia Ailrine</option>
-                            </select>
+                            </select>-->
 
 
                         </div>
@@ -63,7 +67,8 @@
 
                 </div>
                 <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage" boundary-links="true"></pagination>
-
+                <!--<div ng-repeat="airline in searchResult.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.MarketingAirline"></div>-->
+                <select class="selectpicker custom-select" data-style="btn-inverse" ng-model="abc" ng-options="abc as itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.value for itinerary in searchResult | unique:'value'"></select>
                 <div class="search-results" ng-repeat="itinerary in filteredResult | orderBy:sort:reverse">
                     <div class="air-box clearfix" ng-if="travelInfo.oneway">
 

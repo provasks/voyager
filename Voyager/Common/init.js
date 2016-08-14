@@ -13,6 +13,8 @@ $('#bar').scrollFix();
 // When the document is ready
 $(document).ready(function () {
     $('#wrapper').hide();
+    $('#loading').hide();
+
     $('#txtDeparture').datepicker({
         format: "dd/mm/yyyy"
     });
