@@ -121,14 +121,14 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
                 alert('Sorry, NO ITINERARY FOUND')
             }
             else {
-                $scope.searchResult = r;
-                $scope.searchResultCount = $scope.searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary.length;
+                $scope.searchResult = r.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary;
+                $scope.searchResultCount = $scope.searchResult.length;
                 //$scope.$digest();
                 $scope.$watch('currentPage + numPerPage', function () {
                     var begin = (($scope.currentPage - 1) * $scope.numPerPage)
                     , end = begin + $scope.numPerPage;
 
-                    $scope.filteredResult = $scope.searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary.slice(begin, end);
+                    $scope.filteredResult = $scope.searchResult.slice(begin, end);
                 });
             }
         });
