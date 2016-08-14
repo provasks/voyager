@@ -3,6 +3,20 @@
  */
 voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilityService', 'travelInfo',
     function ($scope, SearchService, UtilityService, travelInfo) {
+        $scope.filteredResult = []
+       , $scope.currentPage = 1
+       , $scope.numPerPage = 10
+       , $scope.maxSize = 5;
+
+        //$scope.makeTodos = function () {
+        //    $scope.todos = [];
+        //    for (i = 1; i <= 1000; i++) {
+        //        $scope.todos.push({ text: 'todo ' + i, done: false });
+        //    }
+        //};
+        //$scope.makeTodos();
+
+
         $scope.searchMode = SearchService.getSearchMode();
         $scope.searchResultCount = 0;
         $scope.searchResult = {};
@@ -110,6 +124,12 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
                 $scope.searchResult = r;
                 $scope.searchResultCount = $scope.searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary.length;
                 //$scope.$digest();
+                $scope.$watch('currentPage + numPerPage', function () {
+                    var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+                    , end = begin + $scope.numPerPage;
+
+                    $scope.filteredResult = $scope.searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary.slice(begin, end);
+                });
             }
         });
 

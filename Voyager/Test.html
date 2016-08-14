@@ -1,25 +1,27 @@
-﻿<!doctype html>
-<html ng-app>
-<head>
-    <script src="http://code.angularjs.org/1.1.2/angular.min.js"></script>
-    <script type="text/javascript">
-    function Ctrl($scope) {
-        var initial = {text: 'initial value'};
-        $scope.myModel = angular.copy(initial);
-        $scope.revert = function() {
-            $scope.myModel = angular.copy(initial);
-            $scope.myForm.$setPristine();
-        }
-    }
-    </script>
-</head>
-<body>
-    <form name="myForm" ng-controller="Ctrl">
-        myModel.text: <input name="input" ng-model="myModel.text">
-        <p>myModel.text = {{myModel.text}}</p>
-        <p>$pristine = {{myForm.$pristine}}</p>
-        <p>$dirty = {{myForm.$dirty}}</p>
-        <button ng-click="revert()">Set pristine</button>
-    </form>
-</body>
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+    <link rel="stylesheet" href="style.css" />
+      <script src="Services/script.js"></script>
+  </head>
+
+  <body ng-app="foo" ng-controller="myCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <p>Select Date:</p>
+        </div>
+        <div class="col-sm-8">
+          <mydatepicker ng-model="formData.date" date-options="dateOptions" opened="opened"/>        
+        </div>
+      </div>    
+    </div>
+  </body>
+
 </html>

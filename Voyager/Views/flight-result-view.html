@@ -66,21 +66,24 @@
                     <h4 class="upper">{{searchResultCount}} results found</h4>
 
                 </div>
-
-                <div class="search-results" ng-repeat="itinerary in searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary | orderBy:sort:reverse">
+                <pagination ng-model="currentPage"
+                            total-items="filteredResult.length"
+                            max-size="maxSize"
+                            boundary-links="true">
+                </pagination>
+                <div class="search-results" ng-repeat="itinerary in filteredResult | orderBy:sort:reverse">
                     <div class="air-box clearfix" ng-if="travelInfo.oneway">
 
                         <table class="col-lg-10 col-md-12">
                             <tr ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments">
-                                <!--<tr  ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption[1].FlightSegments">-->
                                 <td class="airline-intro col-lg-2 col-md-12">
                                     <ul>
                                         <li><img src="{{getLogo(flightSegment.MarketingAirline.Code)}}" alt="airline-logo"></li>
                                         <li><h5 class="upper">{{flightSegment.MarketingAirline.value}}</h5></li>
 
                                         <!--<li class="ratings">
-                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                                        </li>-->
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                            </li>-->
                                     </ul>
                                 </td>
                                 <td class="col-lg-4 col-md-6 airline-details">
@@ -89,9 +92,9 @@
                                         <li><i class="fa fa-clock-o"></i>{{flightSegment.DepartureDateTime|flightTime}}</li>
                                         <li><i class="fa fa-map-marker"></i> {{flightSegment.DepartureAirport.value.split(',')[0]}}</li>
                                         <!--<li>
-                            <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
-                            Hours
-                        </li>-->
+                                <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
+                                Hours
+                            </li>-->
                                     </ul>
                                 </td>
                                 <td class="col-lg-4 col-md-6  airline-details">
@@ -116,7 +119,8 @@
                 </div>
 
                 <div class="pages">
-                    <ul class="pagination">
+                    
+                    <!--<ul class="pagination">
                         <li>
                             <a href="#" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
@@ -132,7 +136,7 @@
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </aside>
 
