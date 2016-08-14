@@ -1,6 +1,7 @@
 ﻿voyagerApp.service('UtilityService', function ($http) {
 
     this.callPostAPI = function (url, data, successCallback) {
+        $('#wrapper').show();
         $('#loading').show();
         $http({
             method: 'POST',
@@ -15,10 +16,12 @@
             data: data
         }).then(
        function (response) {
+           $('#wrapper').hide();
            $('#loading').hide();
            return successCallback(response);
        },
        function (response) {
+           $('#wrapper').hide();
            $('#loading').hide();
            console.log(response);
        });
@@ -26,6 +29,7 @@
 
     this.callGetAPI = function (url, successCallback) {
         $('#loading').show();
+        $('#wrapper').show();
         $http({
             method: 'GET',
             url: url,
@@ -38,10 +42,12 @@
             //}
         }).then(
        function (response) {
+           $('#wrapper').hide();
            $('#loading').hide();
            return successCallback(response);
        },
        function (response) {
+           $('#wrapper').hide();
            $('#loading').hide();
            console.log(response);
         });
