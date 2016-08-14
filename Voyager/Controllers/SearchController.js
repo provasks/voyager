@@ -5,8 +5,30 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
     function ($scope, SearchService, UtilityService, travelInfo) {
         $scope.filteredResult = []
        , $scope.currentPage = 1
-       , $scope.numPerPage = 10
-       , $scope.maxSize = 5;
+       , $scope.numPerPage = 20
+       , $scope.maxSize = 5
+        , $scope.pageOptions = [
+            {
+                name: 'View By',
+                value: '0'
+            },
+            {
+                name: '10',
+                value: '10'
+            },
+            {
+                name: '20',
+                value: '20'
+            },
+            {
+                name: '50',
+                value: '50'
+            },
+            {
+                name: '100',
+                value: '100'
+            }
+        ];
 
         //$scope.makeTodos = function () {
         //    $scope.todos = [];
@@ -111,14 +133,17 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
             SearchService.setSearchMode(mode);
             $scope.searchMode = SearchService.getSearchMode();
         };
-
+        $scope.setItemsPerPage = function (num) {
+            $scope.numPerPage = (num === parseInt(num, 10)) ? num:20;
+            $scope.currentPage = 1; //reset to first paghe
+        }
         $scope.$on('update', function () {
             var r = SearchService.getSearchResult();
             if (r.OTA_AirLowFareSearchPlusRS.Errors) {
                 r.OTA_AirLowFareSearchPlusRS.PricedItineraries = [];
                 $scope.searchResult = r;
                 $scope.searchResultCount = 0;
-                alert('Sorry, NO ITINERARY FOUND')
+                alert('Sorry, NO ITINERARY FOUND');
             }
             else {
                 $scope.searchResult = r.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary;

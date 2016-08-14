@@ -33,14 +33,10 @@
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
-
-                            <select class="selectpicker custom-select" data-style="btn-inverse">
-                                <option>Star Ratings</option>
-                                <option>Low to High</option>
-                                <option>High to Low</option>
+                            <select class="selectpicker custom-select" data-style="btn-inverse" ng-model="numPerPage"
+                                    ng-init="numPerPage = pageOptions[2].value"
+                                    ng-options="option.value as option.name for option in pageOptions">
                             </select>
-
-
                         </div>
 
                     </div>
@@ -66,8 +62,8 @@
                     <h4 class="upper">{{searchResultCount}} results found</h4>
 
                 </div>
-                <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage"></pagination>
-                
+                <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage" boundary-links="true"></pagination>
+
                 <div class="search-results" ng-repeat="itinerary in filteredResult | orderBy:sort:reverse">
                     <div class="air-box clearfix" ng-if="travelInfo.oneway">
 
@@ -79,8 +75,8 @@
                                         <li><h5 class="upper">{{flightSegment.MarketingAirline.value}}</h5></li>
 
                                         <!--<li class="ratings">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                            </li>-->
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                        </li>-->
                                     </ul>
                                 </td>
                                 <td class="col-lg-4 col-md-6 airline-details">
@@ -89,9 +85,9 @@
                                         <li><i class="fa fa-clock-o"></i>{{flightSegment.DepartureDateTime|flightTime}}</li>
                                         <li><i class="fa fa-map-marker"></i> {{flightSegment.DepartureAirport.value.split(',')[0]}}</li>
                                         <!--<li>
-                                <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
-                                Hours
-                            </li>-->
+                                            <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
+                                            Hours
+                                        </li>-->
                                     </ul>
                                 </td>
                                 <td class="col-lg-4 col-md-6  airline-details">
@@ -110,13 +106,15 @@
                                 <li class="air-details"><a href="" ng-click="getSetMap()">Details</a></li>
                                 <li class="air-booking"><a href="">Book Now</a></li>
                                 <li><i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}})<!--:{{itinerary.SequenceNumber}} Hours--></li>
+  </ul>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="pages">
-                    <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage"></pagination>
+                    <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage" boundary-links="true"></pagination>
+
 
                 </div>
             </aside>
@@ -149,10 +147,10 @@
                             <label class="custom-lable">Search by Airline Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control custom-control" placeholder="Airline Name"
-                                        aria-describedby="basic-addon2">
+                                       aria-describedby="basic-addon2">
                                 <span class="input-group-addon">
                                     <img src="images/icon-flight2.png"
-                                            alt="flights">
+                                         alt="flights">
                                 </span>
                             </div>
                         </div>
