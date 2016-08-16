@@ -64,7 +64,7 @@ voyagerApp.service('SearchService', function ($rootScope) {
         }
         if(!travelInfo.oneway)
         if (!this.validateDate(travelInfo.returnDate)) {
-            alert('Please enter valid departure date');
+            alert('Please enter valid return date');
             return false;
         }
         return true;

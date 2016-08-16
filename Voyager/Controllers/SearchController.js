@@ -44,8 +44,8 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
         $scope.searchFlight = function () {
             $scope.$watch('frmSearch', function (frmSearch) {
                 if (frmSearch.$dirty) {
-                    var url = 'itinerary,json';
-//                    var url = '/WebServices/SearchService.asmx/SearchFlight';
+//                    var url = 'itinerary.json';
+                    var url = '/WebServices/SearchService.asmx/SearchFlight';
                     if (!SearchService.validateData($scope.travelInfo)) return;
                     location.href = "#/flightSearchResult";
                     UtilityService.callPostAPI(url, $scope.travelInfo, $scope.setSearchResult);
@@ -112,6 +112,7 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
 
         };
         $scope.setSearchResult = function (response) {
+            //response.data = dataItinerary;  //should be commented
             try {
                 var json = UtilityService.removeXML(response.data);
                 SearchService.setSearchResult(json.soapEnvelope.soapBody.wmLowFarePlusResponse, $scope.travelInfo.oneway);
