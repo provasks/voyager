@@ -10,13 +10,32 @@
 voyagerApp.filter('unique', function () {
     return function (arr, field) {
         if (typeof arr == 'undefined') return;
+
         var o = {}, i, l = arr.length, r = [];
         for (i = 0; i < l; i += 1) {
-            o[arr[i][field]] = arr[i];
+            //var airlineValue = arr[i].AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.value;
+            var airlineCode = arr[i].AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.Code;
+            if (!o[airlineCode]) {
+                o[airlineCode] = true;
+                //r.push({ "Code": airlineCode, "value": airlineValue });
+                r.push(arr[i].AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline);
+            }
+            //o[arr[i][field]] = arr[i];
         }
-        for (i in o) {
-            r.push(o[i]);
-        }
+        //for (i in o) {
+        //    r.push(o[i]);
+        //}
         return r;
+
+        //var i, l = arr.length, flightNames = [];
+        //for (i = 0; i < l; i += 1) {
+        //    //o[arr[i][field]] = arr[i];
+        //    flightNames.push(arr[i].AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.value);
+        //}
+
+        //return getUniqueArray(flightNames);
+
+
     };
 });
+

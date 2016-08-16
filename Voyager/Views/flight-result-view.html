@@ -6,7 +6,7 @@
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
-                            <select id="ddlPrice" class="selectpicker custom-select" data-style="btn-inverse" ng-change="sortResult('ddlPrice')" ng-model="ddlPrice">
+                            <select id="ddlPrice" class="selectpicker custom-select" data-style="btn-inverse" ng-change="sortResult('ddlPrice')" ng-model="order">
                                 <option value="">Price</option>
                                 <option value="asc">Low to High</option>
                                 <option value="dsc">High to Low</option>
@@ -17,9 +17,9 @@
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
-                            <select class="selectpicker custom-select" data-style="btn-inverse"
-                                    ng-model="airline" ng-options="airline.value for airline in searchResult.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.MarketingAirline">
-                                <option value="" disabled>Please select an option</option>
+                            <select id="ddlAirline" class="selectpicker custom-select" data-style="btn-inverse" ng-model="airline"
+                                    ng-options="itinerary.Code as itinerary.value for itinerary in searchResult | unique:'value'">
+                                <option value="">All Airlines</option>
                             </select>
                             
                         </div>
@@ -39,43 +39,29 @@
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
-
-                            <select class="selectpicker custom-select" data-style="btn-inverse" id="ddlName" ng-change="sortResult('ddlName')" ng-model="ddlName">
+                            <select class="selectpicker custom-select" data-style="btn-inverse" id="ddlName" ng-change="sortResult('ddlName')" ng-model="sort">
                                 <option value="">Name</option>
                                 <option value="asc">Ascending</option>
                                 <option value="dsc">Descending</option>
                             </select>
-
-
                         </div>
-
                     </div>
-
-
                 </div>
-
                 <div class="results-counts">
                     <h4 class="upper">{{searchResultCount}} results found</h4>
-
                 </div>
                 <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage" boundary-links="true"></pagination>
-                <!--<div ng-repeat="airline in searchResult.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.MarketingAirline"></div>-->
-                <select class="selectpicker custom-select" data-style="btn-inverse" ng-model="abc" ng-options="abc as itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.value for itinerary in searchResult | unique:'value'">
-                    <option value="" disabled>Please select an option</option>
-                </select>
-                <div class="search-results" ng-repeat="itinerary in filteredResult | orderBy:sort:reverse">
+                <div class="search-results" ng-repeat="itinerary in filteredResult | filter:airline | orderBy:property:sort">
                     <div class="air-box clearfix" ng-if="travelInfo.oneway">
-
                         <table class="col-lg-10 col-md-12">
                             <tr ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments">
                                 <td class="airline-intro col-lg-2 col-md-12">
                                     <ul>
                                         <li><img src="{{getLogo(flightSegment.MarketingAirline.Code)}}" alt="airline-logo"></li>
                                         <li><h5 class="upper">{{flightSegment.MarketingAirline.value}}</h5></li>
-
                                         <!--<li class="ratings">
-                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                                        </li>-->
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                            </li>-->
                                     </ul>
                                 </td>
                                 <td class="col-lg-4 col-md-6 airline-details">
@@ -84,9 +70,9 @@
                                         <li><i class="fa fa-clock-o"></i>{{flightSegment.DepartureDateTime|flightTime}}</li>
                                         <li><i class="fa fa-map-marker"></i> {{flightSegment.DepartureAirport.value.split(',')[0]}}</li>
                                         <!--<li>
-                                            <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
-                                            Hours
-                                        </li>-->
+                                <i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}}) <span><i class="fa fa-clock-o"></i></span>02
+                                Hours
+                            </li>-->
                                     </ul>
                                 </td>
                                 <td class="col-lg-4 col-md-6  airline-details">
@@ -94,7 +80,6 @@
                                     <ul>
                                         <li><i class="fa fa-clock-o "></i>{{flightSegment.ArrivalDateTime|flightTime}}</li>
                                         <li><i class="fa fa-map-marker"></i>{{flightSegment.ArrivalAirport.value.split(',')[0]}}</li>
-
                                     </ul>
                                 </td>
                             </tr>
@@ -105,8 +90,8 @@
                                 <li class="air-details"><a href="" ng-click="getSetMap()">Details</a></li>
                                 <li class="air-booking"><a href="">Book Now</a></li>
                                 <li><i class="fa fa-flag"></i>Stops({{itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments.length-1}})<!--:{{itinerary.SequenceNumber}} Hours--></li>
-  </ul>
-                            </ul>
+                                </ul>
+                                
                         </div>
                     </div>
                 </div>

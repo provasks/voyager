@@ -126,5 +126,13 @@ $(".fancybox").fancybox({
     closeEffect: 'none'
 });
 
-
-
+function getUniqueArray(arr) {
+    var n = {}, r = [];
+    for (var i = 0, len = arr.length; i < len; i++) {
+        if (!n[arr[i]]) {
+            n[arr[i]] = true;
+            r.push(arr[i]);
+        }
+    }
+    return r;
+}

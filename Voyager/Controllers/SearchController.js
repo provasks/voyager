@@ -96,19 +96,19 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
         $scope.sortResult = function (obj) {
             var val;
             if (obj=='ddlPrice') {
-                $scope.sort = "itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount";
+                $scope.property = "itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount";
                 //$scope.reverse = ddlPrice.asc ? true : false;
-                val = $("#ddlPrice option:selected").val();
+                //val = $("#ddlPrice option:selected").val();
             }
             if (obj == 'ddlName') {
-                $scope.sort = "itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].DepartureDateTime";
+                $scope.property = "itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].DepartureDateTime";
                 //  $scope.reverse = ddlName.asc ? true : false;
-                val = $("#ddlName option:selected").val();
+                //val = $("#ddlName option:selected").val();
             }
-            if (val == 'dsc')
-                $scope.reverse = true;
-            else
-                $scope.reverse = false;
+            //if (val == 'dsc')
+            //    $scope.reverse = true;
+            //else
+            //    $scope.reverse = false;
 
         };
         $scope.setSearchResult = function (response) {
