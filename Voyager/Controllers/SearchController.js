@@ -9,10 +9,6 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
        , $scope.maxSize = 5
         , $scope.pageOptions = [
             {
-                name: 'View By',
-                value: '0'
-            },
-            {
                 name: '10',
                 value: '10'
             },
@@ -93,22 +89,17 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
             }
 
         };
-        $scope.sortResult = function (obj) {
+        $scope.sortResult = function (objId) {
             var val;
-            if (obj=='ddlPrice') {
+            if (objId=='ddlPrice') {
                 $scope.property = "itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount";
-                //$scope.reverse = ddlPrice.asc ? true : false;
-                //val = $("#ddlPrice option:selected").val();
+                //
             }
-            if (obj == 'ddlName') {
+            else if (objId == 'ddlDepTime') {
                 $scope.property = "itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].DepartureDateTime";
-                //  $scope.reverse = ddlName.asc ? true : false;
-                //val = $("#ddlName option:selected").val();
             }
-            //if (val == 'dsc')
-            //    $scope.reverse = true;
-            //else
-            //    $scope.reverse = false;
+            val = $("#" + objId + " option:selected").val();
+            $scope.reverse = (val=="asc") ? false : true;
 
         };
         $scope.setSearchResult = function (response) {
