@@ -134,12 +134,12 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
                 $scope.searchResult = r.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary;
                 $scope.searchResultCount = $scope.searchResult.length;
                 //$scope.$digest();
-                $scope.$watch('currentPage + numPerPage', function () {
-                    var begin = (($scope.currentPage - 1) * $scope.numPerPage)
-                    , end = begin + $scope.numPerPage;
+                //$scope.$watch('currentPage + numPerPage', function () {
+                //    var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+                //    , end = begin + $scope.numPerPage;
 
-                    $scope.filteredResult = $scope.searchResult.slice(begin, end);
-                });
+                //    $scope.filteredResult = $scope.searchResult.slice(begin, end);
+                //});
             }
         });
 

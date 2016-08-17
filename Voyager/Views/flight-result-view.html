@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
-                            <select id="ddlAirline" class="selectpicker custom-select" data-style="btn-inverse" ng-model="airline"
+                            <select id="ddlAirline" class="selectpicker custom-select" data-style="btn-inverse" ng-model="airline" ng-change="currentPage=1"
                                     ng-options="itinerary.Code as itinerary.value for itinerary in searchResult | unique:'value'">
                                 <option value="">All Airlines</option>
                             </select>
@@ -42,10 +42,10 @@
                     </div>
                 </div>
                 <div class="results-counts">
-                    <h4 class="upper">{{searchResultCount}} results found</h4>
+                    <h4 class="upper">{{filteredResult.length}} of {{searchResultCount}} results</h4>
                 </div>
-                <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage" boundary-links="true"></pagination>
-                <div class="search-results" ng-repeat="itinerary in filteredResult | airlines:airline | orderBy:property:reverse">
+                <pagination ng-model="currentPage" max-size="maxSize" total-items="filteredResult.length" items-per-page="numPerPage" boundary-links="true"></pagination>
+                <div class="search-results" ng-repeat="itinerary in filteredResult | airlines:airline:this | orderBy:property:reverse">
                     <div class="air-box clearfix" ng-if="travelInfo.oneway">
                         <table class="col-lg-10 col-md-12">
                             <tr ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments">
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="pages">
-                    <pagination ng-model="currentPage" max-size="maxSize" total-items="searchResultCount" items-per-page="numPerPage" boundary-links="true"></pagination>
+                    <pagination ng-model="currentPage" max-size="maxSize" total-items="filteredResult.length" items-per-page="numPerPage" boundary-links="true"></pagination>
 
                 </div>
             </aside>

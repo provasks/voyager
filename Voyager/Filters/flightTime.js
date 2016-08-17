@@ -23,19 +23,23 @@ voyagerApp.filter('unique', function () {
 });
 
 voyagerApp.filter('airlines', function () {
-    return function (arr, code) {
-        var i,  r = [];
+    return function (arr, code, $scope) {
+        var i, filteredResult = [];
+        if (typeof $scope.searchResult.length == 'undefined') return filteredResult;
         if (typeof code == 'undefined' || code == null)
-            return arr;
+            filteredResult = $scope.searchResult;
         else {
-            var l = arr.length;
+            var l = $scope.searchResult.length;
             for (i = 0; i < l; i++) {
-                if(arr[i].AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.Code===code)
-                    r.push(arr[i]);
+                if ($scope.searchResult[i].AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].MarketingAirline.Code === code)
+                    filteredResult.push($scope.searchResult[i]);
             }
-            return r;
         }
-        
+        var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+            , end = begin + $scope.numPerPage;
+
+        $scope.filteredResult = filteredResult;
+        return filteredResult.slice(begin, end);
     };
 });
 
