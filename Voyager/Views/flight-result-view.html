@@ -42,10 +42,10 @@
                     </div>
                 </div>
                 <div class="results-counts">
-                    <h4 class="upper">{{filteredResult.length}} of {{searchResultCount}} results</h4>
+                    <h4 class="upper">{{filteredResult.length}} results found.</h4>
                 </div>
                 <pagination ng-model="currentPage" max-size="maxSize" total-items="filteredResult.length" items-per-page="numPerPage" boundary-links="true"></pagination>
-                <div class="search-results" ng-repeat="itinerary in filteredResult | airlines:airline:this | orderBy:property:reverse">
+                <div class="search-results" ng-repeat="itinerary in filteredResult | airlines:airline:this | sort:property:reverse">
                     <div class="air-box clearfix" ng-if="travelInfo.oneway">
                         <table class="col-lg-10 col-md-12">
                             <tr ng-repeat="flightSegment in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments">

@@ -43,3 +43,19 @@ voyagerApp.filter('airlines', function () {
     };
 });
 
+voyagerApp.filter('sort', function () {
+    return function (array, key, reverse) {
+        if (reverse)
+            return array.sort(function (a, b) {
+                var x = eval('a' + '.' + key);
+                var y = eval('b' + '.' + key);
+                return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+            });
+        else
+            return array.sort(function (a, b) {
+                var x = eval('a' + '.' + key);
+                var y = eval('b' + '.' + key);
+                return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+            });
+    };
+});

@@ -90,17 +90,15 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
 
         };
         $scope.sortResult = function (objId) {
-            var val;
+            var val = $("#" + objId + " option:selected").val();
             if (objId=='ddlPrice') {
-                $scope.property = "itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount";
-                //
+                $scope.property = "AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount";
+                $scope.reverse = (val == "asc") ? true : false; //the logic seems not correct but working properly
             }
             else if (objId == 'ddlDepTime') {
-                $scope.property = "itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].DepartureDateTime";
+                $scope.property = "AirItinerary.OriginDestinationOptions.OriginDestinationOption.FlightSegments[0].DepartureDateTime";
+                $scope.reverse = (val == "asc") ? false : true;
             }
-            val = $("#" + objId + " option:selected").val();
-            $scope.reverse = (val=="asc") ? false : true;
-
         };
         $scope.setSearchResult = function (response) {
             //response.data = dataItinerary;  //should be commented
