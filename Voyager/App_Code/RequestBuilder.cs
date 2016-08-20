@@ -64,8 +64,8 @@ public class RequestBuilder
         return @"
                 <OriginDestinationInformation>
                     <DepartureDateTime>" + Utitlity.getFormattedDate(date, "yyyy-MM-dd") + @"T00:00:00</DepartureDateTime>
-                    <OriginLocation LocationCode=""" +flyTo  + @""" />
-                    <DestinationLocation LocationCode=""" +  flyFrom + @""" />
+                    <OriginLocation LocationCode=""" + flyTo + @""" />
+                    <DestinationLocation LocationCode=""" + flyFrom + @""" />
                 </OriginDestinationInformation>";
     }
 

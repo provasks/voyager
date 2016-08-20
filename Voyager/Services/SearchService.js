@@ -12,12 +12,6 @@ voyagerApp.service('SearchService', function ($rootScope) {
     };
     this.setSearchResult = function (result, oneway) {
         searchResult = result;
-        //if (typeof result.OTA_AirLowFareSearchPlusRS.Errors != 'undefined') {
-        //    searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries.PricedItinerary = [];
-        //    alert(result.OTA_AirLowFareSearchPlusRS.Errors.Error.value);
-        //    $rootScope.$broadcast('update');
-        //    return;
-        //}
         if (typeof searchResult.OTA_AirLowFareSearchPlusRS.PricedItineraries == 'undefined') {
             $rootScope.$broadcast('update'); return;
         };
@@ -26,9 +20,8 @@ voyagerApp.service('SearchService', function ($rootScope) {
             if(oneway)
                 this.setODOption( itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption);
             else
-                for (i in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption) {
+                for (i in itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption) 
                     this.setODOption(itinerary.AirItinerary.OriginDestinationOptions.OriginDestinationOption[i]);
-                }
         }
         $rootScope.$broadcast('update');
     };
@@ -36,12 +29,10 @@ voyagerApp.service('SearchService', function ($rootScope) {
         option.FlightSegments = new Array();
         var segment = option.FlightSegment;
 
-        if (segment.length == undefined) {
+        if (segment.length == undefined)
             option.FlightSegments.push(segment);
-        }
         else
             option.FlightSegments = segment;
-        // odOption.FlightSegments[0].DepartureDateTime = odOption.FlightSegments[0].DepartureDateTime.replace(/T|:|-/g, '');
         option.FlightSegment = undefined;
     }
     this.getSearchResult = function () {
@@ -58,21 +49,29 @@ voyagerApp.service('SearchService', function ($rootScope) {
             alert('You should select at least one person');
             return false;
         }
-        if (!this.validateDate(travelInfo.departureDate)) {
+        if (!this.validateDate(this.dateOnly(travelInfo.departureDate))) {
             alert('Please enter valid departure date');
             return false;
         }
-        if(!travelInfo.oneway)
-        if (!this.validateDate(travelInfo.returnDate)) {
-            alert('Please enter valid return date');
-            return false;
+        if (!travelInfo.oneway) {
+            if (!this.validateDate(this.dateOnly(travelInfo.returnDate))) {
+                alert('Please enter valid return date');
+                return false;
+            }
+            if (this.dateOnly(travelInfo.departureDate) > this.dateOnly(travelInfo.returnDate)) {
+                alert('Departure date must be less than or equal to Return date');
+                return false;
+            }
         }
         return true;
     };
+    this.dateOnly = function (d) {
+        return new Date(d.setHours(0, 0, 0, 0));
+    }
     this.validateDate = function (text) {
         try{
-            text = this.calenderDate(text);
-            return true;
+            var temp = this.calenderDate(text);
+            return text >= new Date();
         }
         catch (err) {
             return false;
