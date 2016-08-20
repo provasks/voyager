@@ -71,7 +71,7 @@ voyagerApp.service('SearchService', function ($rootScope) {
     this.validateDate = function (text) {
         try{
             var temp = this.calenderDate(text);
-            return text >= new Date();
+            return text >= this.dateOnly(new Date());
         }
         catch (err) {
             return false;
