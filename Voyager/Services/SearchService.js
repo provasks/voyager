@@ -1,7 +1,7 @@
 /**
  * Created by provasks on 3/22/2016.
  */
-voyagerApp.service('SearchService', function ($rootScope) {
+voyagerApp.service('SearchService', ['$rootScope', 'UtilityService', function ($rootScope, UtilityService) {
     var searchMode = "flight";
     var searchResult = null;
     this.setSearchMode = function (mode) {
@@ -85,5 +85,25 @@ voyagerApp.service('SearchService', function ($rootScope) {
         var yyyy = text.getFullYear();
         return mm + '/' + dd + '/' + yyyy;
     };
-});
+    this.getAirports = function (keyword, callback) {
+        if (keyword.length < 3) return;
+        var url = '/WebServices/SearchService.asmx/GetAirports';
+        var data = { url: 'https://iatacodes.org/api/v6/autocomplete?', keyword: keyword }
+        UtilityService.callPostAPI(url, data, callback);
+    };
+
+    this.mergeAirports = function (json) {
+        var airports = [];
+        for (var index in json.airports) {
+            airports.push(json.airports[index]);
+        }
+        for (var index in json.airports_by_cities) {
+            airports.push(json.airports_by_cities[index]);
+        }
+        for (var index in json.airports_by_countries) {
+            airports.push(json.airports_by_countries[index]);
+        }
+        return airports;
+    };
+}]);
 

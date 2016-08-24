@@ -8,7 +8,9 @@
                     <label class="custom-lable">Flying From</label>
 
                     <div class="input-group">
-
+                        <!--<md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="airport in getFromAirports(searchText)" md-item-text="airport.name">
+                            <span md-highlight-text="searchText">{{airport.name}}</span>
+                        </md-autocomplete>-->
                         <input type="text" class="form-control custom-control" id="txtFlyFrom"
                                ng-model="travelInfo.flyFrom" ng-model-options="{debounce: 1000}"
                                list="fromAirports" ng-change="getFromAirports(travelInfo.flyFrom)"
@@ -17,10 +19,8 @@
                             <img src="images/icon-flight2.png" alt="flights" />
                         </span>
                         <datalist id="fromAirports">
-                            <!--<select ng-model='airport.iata' ng-options='airport.iata as airport.iata for (airport.iata,airport.country) in airports'></select>-->
-                            <option ng-repeat="airport in travelInfo.fromAirports" value="{{airport.code}}">{{airport.name + ',' + airport.country_name}}</option>
+                            <option ng-repeat="airport in travelInfo.fromAirports | unique : 'code'" value="{{airport.name + ',' + airport.country_name}}">{{airport.name + ',' + airport.country_name}}</option>
                         </datalist>
-
                     </div>
                 </div>
 
@@ -49,10 +49,6 @@
 
                     <div class="input-group">
                         <input type="date" placeholder="Select Date" class="form-control custom-control" id="departure" ng-model="travelInfo.departureDate">
-
-                        <!--<input type="text" placeholder="Select Date" class="form-control custom-control" id="departure" ng-model="travelInfo.departureDate">-->
-                        <!--<span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>-->
-
                     </div>
                 </div>
 
@@ -61,9 +57,6 @@
 
                     <div class="input-group">
                         <input type="date" placeholder="Select Date" class="form-control custom-control" id="rturning" ng-model="travelInfo.returnDate">
-                        <!--<input type="text" placeholder="Select Date" class="form-control custom-control" id="returning">-->
-                        <!--<span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>-->
-
                     </div>
                 </div>
 
@@ -73,14 +66,6 @@
 
                     <div class="input-group">
                         <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.adult" />
-                        <!--<select class="selectpicker custom-select" data-style="btn-inverse" ng-model="travelInfo.adult">
-                            <option>00</option>
-                            <option>01</option>
-                            <option>02</option>
-                            <option>03</option>
-                        </select>-->
-
-
                     </div>
                 </div>
 
@@ -89,14 +74,6 @@
 
                     <div class="input-group">
                         <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.child" />
-                        <!--<select class="selectpicker custom-select" data-style="btn-inverse" ng-model="travelInfo.child">
-                            <option>00</option>
-                            <option>01</option>
-                            <option>02</option>
-                            <option>03</option>
-                        </select>-->
-
-
                     </div>
                 </div>
 

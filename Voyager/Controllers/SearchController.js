@@ -60,23 +60,20 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
         };
         $scope.getFromAirports = function (keyword) {
             var url = '/WebServices/SearchService.asmx/GetAirports';
-            var data = { url: 'https://iatacodes.org/api/v6/autocomplete?', keyword: keyword }
-            UtilityService.callPostAPI(url, data, $scope.setFromAirports);
+            SearchService.getAirports(keyword, $scope.setFromAirports);
         };
         $scope.setFromAirports = function (response) {
             try {
                 var json = UtilityService.removeXML(response.data);
                 if (typeof json.response == 'undefined') return;
-                $scope.travelInfo.fromAirports = json.response.airports;
+                $scope.travelInfo.fromAirports = SearchService.mergeAirports(json.response);
             }
             catch (err) {
                 alert('No airport found with the query');
             }
         };
         $scope.getToAirports = function (keyword) {
-            var url = '/WebServices/SearchService.asmx/GetAirports';
-            var data = { url: 'https://iatacodes.org/api/v6/autocomplete?', keyword: keyword }
-            UtilityService.callPostAPI(url, data, $scope.setToAirports);
+            SearchService.getAirports(keyword, $scope.setToAirports);
         };
         $scope.setToAirports = function (response) {
             try {

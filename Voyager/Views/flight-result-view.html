@@ -15,7 +15,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="input-group">
                             <select id="ddlAirline" class="selectpicker custom-select" data-style="btn-inverse" ng-model="airline" ng-change="currentPage=1"
-                                    ng-options="itinerary.Code as itinerary.value for itinerary in searchResult | unique:'value'">
+                                    ng-options="itinerary.Code as itinerary.value for itinerary in searchResult | uniqueFlight:'value'">
                                 <option value="">All Airlines</option>
                             </select>
 
