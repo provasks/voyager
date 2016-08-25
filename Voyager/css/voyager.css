@@ -46,3 +46,21 @@ div#loading {
     background-repeat: repeat;
     opacity:0.5;*/
 }
+
+#airports ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#airports li {
+    border-bottom: 1px solid #90bade;
+    padding:0px 3px;
+    background-color: white;
+    font-size: 12px;
+}
+
+#airports li:hover{
+    background-color:wheat;
+}

@@ -9,6 +9,7 @@
 voyagerApp.filter('unique', function () {
 
     return function (arr, field) {
+        if (typeof arr == 'undefined') return;
         var o = {}, i, l = arr.length, r = [];
         for(i=0; i<l;i+=1) {
             o[arr[i][field]] = arr[i];

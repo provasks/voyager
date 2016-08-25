@@ -3,88 +3,45 @@
         <div class="container">
             <div class="row">
                 <h3 class="text-center upper white">FIND YOUR PERFECT Airline</h3>
-
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Flying From</label>
-
-                    <div class="input-group">
-                        <!--<md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="airport in getFromAirports(searchText)" md-item-text="airport.name">
-                            <span md-highlight-text="searchText">{{airport.name}}</span>
-                        </md-autocomplete>-->
-                        <input type="text" class="form-control custom-control" id="txtFlyFrom"
-                               ng-model="travelInfo.flyFrom" ng-model-options="{debounce: 1000}"
-                               list="fromAirports" ng-change="getFromAirports(travelInfo.flyFrom)"
-                               placeholder="City or Airport Name" aria-describedby="basic-addon2" />
-                        <span class="input-group-addon">
-                            <img src="images/icon-flight2.png" alt="flights" />
-                        </span>
-                        <datalist id="fromAirports">
-                            <option ng-repeat="airport in travelInfo.fromAirports | unique : 'code'" value="{{airport.name + ',' + airport.country_name}}">{{airport.name + ',' + airport.country_name}}</option>
-                        </datalist>
-                    </div>
+                    <auto-complete title="Airport Name" subtitle="name" displaykey="name" retkey="code" modelret="travelInfo.flyFrom" modeldisplay="name"></auto-complete>
                 </div>
-
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Flying to</label>
-
-                    <div class="input-group">
-
-                        <input type="text" class="form-control custom-control" id="txtFlyTo"
-                               ng-model="travelInfo.flyTo" ng-model-options="{debounce: 1000}"
-                               list="toAirports" ng-change="getToAirports(travelInfo.flyTo)"
-                               placeholder="City or Airport Name" aria-describedby="basic-addon2" />
-                        <span class="input-group-addon">
-                            <img src="images/icon-flight2.png" alt="flights" />
-                        </span>
-                        <datalist id="toAirports">
-                            <!--<select ng-model='airport.iata' ng-options='airport.iata as airport.iata for (airport.iata,airport.country) in airports'></select>-->
-                            <option ng-repeat="airport in travelInfo.toAirports" value="{{airport.code}}">{{airport.name + ',' + airport.country_name}}</option>
-                        </datalist>
-                    </div>
+                    <auto-complete title="Airport Name" subtitle="name" displaykey="name" retkey="code" modelret="travelInfo.flyTo" modeldisplay="name"></auto-complete>
                 </div>
-
 
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Departure </label>
-
                     <div class="input-group">
                         <input type="date" placeholder="Select Date" class="form-control custom-control" id="departure" ng-model="travelInfo.departureDate">
                     </div>
                 </div>
-
                 <div class="custom-margin  col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Arrival </label>
-
                     <div class="input-group">
                         <input type="date" placeholder="Select Date" class="form-control custom-control" id="rturning" ng-model="travelInfo.returnDate">
                     </div>
                 </div>
 
-
                 <div class="custom-margin col-lg-1 col-md-1 col-sm-2 col-xs-12">
                     <label class="custom-lable">Adults </label>
-
                     <div class="input-group">
                         <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.adult" />
                     </div>
                 </div>
-
                 <div class="custom-margin col-lg-1 col-md-1 col-sm-2 col-xs-12">
                     <label class="custom-lable">Kids </label>
-
                     <div class="input-group">
                         <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.child" />
                     </div>
                 </div>
 
-
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
-
                     <button ng-click="searchFlight()" class="btn-green custom-margin2 ">Search Now</button>
 
-
                 </div>
-
             </div>
         </div>
     </form>

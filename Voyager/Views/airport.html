@@ -1,0 +1,17 @@
+﻿<div class="input-group">
+    <input type="text" ng-model="modelret" ng-keypress="changed(modelret)" ng-keydown="selected=false" class="form-control custom-control" aria-describedby="basic-addon2" placeholder="City or Airport Name" list="list" />
+    <span class="input-group-addon">
+        <img src="images/icon-flight2.png" alt="flights" />
+    </span>
+</div>
+<!--<datalist id="list" >
+    <option ng-repeat="item in TypeAheadData|unique:retkey track by $index" value="{{item.code}}">{{item.name + ',' + item.country_name}}</option>
+</datalist>-->
+<div id="airports">
+    <ul class="list-group table-condensed overlap" ng-hide="selected">
+        <li href="javascript:void();" ng-repeat="item in TypeAheadData|unique:retkey track by $index" ng-click="handleSelection(item[retkey],item[displaykey])" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
+            {{item[subtitle]}}
+        </li>
+    </ul>
+</div>
+
