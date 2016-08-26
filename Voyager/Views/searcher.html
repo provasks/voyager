@@ -53,39 +53,13 @@
                     <div class="tab-content">
                         <div ng-if='searchMode == "flight"' role="tabpanel" ng-class="['tab-pane', {active :searchMode == 'flight'}]" id="01">
                             <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                Dirty: {{frmSearch.$dirty}}
+                                <!--Dirty: {{frmSearch.$dirty}}-->
                                 <label class="custom-lable">Flying From </label>
-                                <!--<input auto-complete ui-items="names" ng-model="selected">
-                            selected = {{selected}}-->
-                                <div class="input-group">
-                                    <input type="text" class="form-control custom-control" id="txtFlyFrom"
-                                           ng-model="travelInfo.flyFrom" ng-model-options="{debounce: 1000}"
-                                           list="fromAirports" ng-change="getFromAirports(travelInfo.flyFrom)"
-                                           placeholder="City or Airport Name" aria-describedby="basic-addon2" autocomplete="off" />
-                                    <span class="input-group-addon">
-                                        <img src="images/icon-flight2.png" alt="flights" />
-                                    </span>
-                                    <datalist id="fromAirports">
-                                        <option ng-repeat="airport in travelInfo.fromAirports" value="{{airport.code}}">{{airport.name + ',' + airport.country_name}}</option>
-                                    </datalist>
-                                </div>
+                                <auto-complete title="Airport Name" subtitle="name" displaykey="name" retkey="code" modelret="travelInfo.flyFrom" modeldisplay="name"></auto-complete>
                             </div>
                             <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                 <label class="custom-lable">Flying to </label>
-
-                                <div class="input-group">
-                                    <input type="text" class="form-control custom-control" id="txtFlyTo"
-                                           ng-model="travelInfo.flyTo" ng-model-options="{debounce: 1000}"
-                                           list="toAirports" ng-change="getToAirports(travelInfo.flyTo)"
-                                           placeholder="City or Airport Name" aria-describedby="basic-addon2" />
-                                    <span class="input-group-addon">
-                                        <img src="images/icon-flight2.png" alt="flights" />
-                                    </span>
-                                    <datalist id="toAirports">
-                                        <!--<select ng-model='airport.iata' ng-options='airport.iata as airport.iata for (airport.iata,airport.country) in airports'></select>-->
-                                        <option ng-repeat="airport in travelInfo.toAirports" value="{{airport.code}}">{{airport.name + ',' + airport.country_name}}</option>
-                                    </datalist>
-                                </div>
+                                <auto-complete title="Airport Name" subtitle="name" displaykey="name" retkey="code" modelret="travelInfo.flyTo" modeldisplay="name"></auto-complete>
                             </div>
                             <div class="custom-margin  col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                 <label class="custom-lable">Departure date </label>

@@ -5,27 +5,26 @@
         <meta charset='utf-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Voyager Travels </title>
+
         <!--FONTS INCLUDE-->
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700'>
 
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
         <!--CSS INCLUDES-->
-
-        <link href="Vendors/css/awwal.css" rel="stylesheet">
-        <link href="Vendors/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="Vendors/css/bootstrap.css" rel="stylesheet">
-        <link href="Vendors/css/media.css" rel="stylesheet">
-        <link href="Vendors/css/hover.css" rel="stylesheet">
-        <link href="Vendors/css/menu2.css" rel="stylesheet">
-        <link href="Vendors/css/owl.carousel.css" rel="stylesheet">
-        <link href="Vendors/css/owl.theme.css" rel="stylesheet">
-        <link href="Vendors/css/effects.css" rel="stylesheet" media="all">
-        <link href="Vendors/css/datepicker.css" rel="stylesheet" media="all">
-        <link rel="stylesheet" type="text/css" href="Vendors/dist/css/bootstrap-select.css">
-        <link rel="stylesheet" href="Vendors/jquery-ui-themes-1.10.3/themes/smoothness/jquery-ui.css"/>
-        <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>-->
-        <link rel="stylesheet" type="text/css" href="Vendors/source/jquery.fancybox.css?v=2.1.5" media="screen"/>
-        <link href="css/voyager.css" rel="stylesheet" />
+        <link rel='stylesheet' type='text/css' href='Vendors/css/awwal.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/font-awesome-4.4.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/bootstrap.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/media.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/hover.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/menu2.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/owl.carousel.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/owl.theme.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/effects.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/css/datepicker.css'>
+        <link rel='stylesheet' type='text/css' href='Vendors/dist/css/bootstrap-select.css'>
+        <link rel="stylesheet" type="text/css" href="Vendors/jquery-ui-themes-1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="Vendors/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <link rel='stylesheet' type='text/css' href='css/voyager.css'>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="voyagerApp">
         <div id="loading" ></div>
@@ -39,7 +38,7 @@
         <div ng-include="'Views/footer.html'"></div>
         <div ng-include="'Views/rights.html'"></div>
 
-        <!--JS INLCUDES-->
+        <!--VENDOR'S JS INLCUDES-->
         <script src="Vendors/js/jquery-1.7.2.min.js"></script>
         <script src="Vendors/js/bootstrap.min.js"></script>
         <script src="Vendors/js/custom.js"></script>
@@ -52,29 +51,31 @@
         <script src="Vendors/js/modernizr.custom.js"></script>
         <script src="Vendors/js/scrollfix.js"></script>
         <script src="Vendors/js/datepicker.js"></script>
-        <script src="Scripts/Common/init.js"></script>
-        <!--<script src="Vendors/angular-1.4.8/angular.js"></script>-->
         <script data-require="angular.js@*" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
         <script src="Vendors/angular-1.4.8/angular-route.js"></script>
         <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
 
-        <!--<script data-require="ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>-->
+        <!--APP JS INCLUDES-->
+        <script src="Scripts/app.js"></script>
 
-
+        <!--COMMON JS INCLUDES-->
+        <script src="Scripts/Common/init.js"></script>
         <script src="Scripts/Common/dataFormat.js"></script>
         <script src="Scripts/Common/date.js"></script>
-        <script src="app.js"></script>
         <script src="Scripts/Common/RouterConfig.js"></script>
+
+        <!--DIRECTIVES/FILTERS JS INCLUDES-->
         <script src="Scripts/Directives/Autocomplete.js"></script>
         <script src="Scripts/Filters/flightTime.js"></script>
+
+        <!--SERVICES JS INCLUDES-->
         <script src="Scripts/Services/LoginService.js"></script>
-        <script src="Scripts/Controllers/LoginController.js"></script>
         <script src="Scripts/Services/SearchService.js"></script>
         <script src="Scripts/Services/UtilityService.js"></script>
-        <!--<script src="Scripts/Directives/keyboardPoster.js"></script>
-        <script src="Scripts/Services/GeolocatorService.js"></script>-->
+        <!--<script src="Scripts/Services/GeolocatorService.js"></script>-->
 
-        <!--Controllers-->
+        <!--CONTROLLERS JS INCLUDES-->
+        <script src="Scripts/Controllers/LoginController.js"></script>
         <script src="Scripts/Controllers/CarouselController.js"></script>
         <script src="Scripts/Controllers/SearchController.js"></script>
         <script src="Scripts/Controllers/HomeController.js"></script>
