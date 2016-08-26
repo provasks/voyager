@@ -1,0 +1,1242 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voyager Trabels </title>
+    <!--FONTS INCLUDE-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    <!--CSS INCLUDES-->
+    <link href="Vendors/css/awwal.css" rel="stylesheet">
+    <link href="Vendors/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="Vendors/css/bootstrap.css" rel="stylesheet">
+    <link href="Vendors/css/media.css" rel="stylesheet">
+    <link href="Vendors/css/hover.css" rel="stylesheet">
+    <link href="Vendors/css/menu2.css" rel="stylesheet">
+    <link href="Vendors/css/owl.carousel.css" rel="stylesheet">
+    <link href="Vendors/css/owl.theme.css" rel="stylesheet">
+    <link href="Vendors/css/effects.css" rel="stylesheet" media="all">
+    <link href="Vendors/css/datepicker.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="Vendors/dist/css/bootstrap-select.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <!--JS INLCUDES-->
+    <script src="Vendors/js/jquery-1.7.2.min.js"></script>
+    <script src="Vendors/js/bootstrap.min.js"></script>
+    <script src="Vendors/js/custom.js"></script>
+    <script src="Vendors/js/superfish.js"></script>
+    <script src="Vendors/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="Vendors/dist/js/bootstrap-select.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script src="Vendors/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="Vendors/js/scrollfix.js"></script>
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <a href="#" class="crunchify-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-7 hidden-xs">
+                    <div class="contacts-top">
+                        <ul>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                08055175644
+                            </li>
+                            <li class="c-email">
+                                <i class="fa fa-envelope"></i>
+                                hello@voyagertravels.com
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-3 col-xs-3">
+                    <div class="social-icons hidden-sm hidden-xs">
+                        <ul>
+
+                            <li class="fb"><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li class="tw"><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li class="google"><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="logins">
+                        <ul>
+                            <li class="login"><a href=""><i class="fa fa-user"></i>Login</a></li>
+                            <li class="register"><a href=""><i class="fa fa-unlock-alt"></i>Register</a> </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <header id="bar">
+        <div class="container">
+            <div class="row">
+                <div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-6"><a href=""><img src="images/logo.png"></a></div>
+                <div class="menu col-lg-9 col-md-9 col-sm-9 col-xs-6">
+
+                    <nav id="nav-wrap">
+                        <ul class="sf-menu">
+                            <li><a href="">Home</a></li>
+                            <li>
+                                <a href="">About</a>
+                                <ul>
+                                    <li><a href="">The Compnay</a></li>
+                                    <li><a href="">Our Team</a></li>
+                                    <li><a href="">The Directors</a></li>
+                                    <li><a href="">Our Clients</a></li>
+                                </ul>
+                            <li><a href="">Services </a></li>
+                            <li><a href="">Corporate Travels</a> </li>
+                            <li><a href="">Partners</a></li>
+
+
+
+
+                            <li><a href=""> Contact</a></li>
+
+                        </ul>
+                    </nav>
+
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+
+            <div class="item active">
+                <img src="images/01.jpg" alt="">
+
+
+
+                <div class="cus-caption">
+                    <h2 class="white upper">Sky High Dubai</h2>
+                    <h4 class="white upper">Starting From <span class="green">$1300</span></h4>
+
+                    <div class="action-btn">
+                        <a href="" class="btn-line hvr-sweep-to-bottom">Book Now</a>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="item">
+                <img src="images/02.jpg" alt="">
+
+
+
+                <div class="cus-caption">
+                    <h2 class="white upper">Explore beautiful Paris</h2>
+                    <h4 class="white upper">Starting From <span class="green">$1300</span></h4>
+
+                    <div class="action-btn">
+                        <a href="" class="btn-line hvr-sweep-to-bottom">Book Now</a>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+
+        </a>
+    </div>
+
+    <div class="searcher">
+        <div class="my-tabs">
+            <div class="tab-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-contents">StaRt your journey with us <span>Search for cheap flights / hotels</span></div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#01" aria-controls="home" role="tab" data-toggle="tab"><img src="images/icon-flight.png" alt="flights">Flights</a></li>
+                            <li role="presentation"><a href="#02" aria-controls="profile" role="tab" data-toggle="tab"><img src="images/icon-hotel.png" alt="Hotels">Hotels</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Tab panes -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="01">
+
+                            <form>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Flying From </label>
+                                    <div class="input-group">
+
+                                        <input type="text" class="form-control custom-control" placeholder="City or Airport Name" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon"> <img src="images/icon-flight2.png" alt="flights"></span>
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Flying to </label>
+                                    <div class="input-group">
+
+                                        <input type="text" class="form-control custom-control" placeholder="City or Airport Name" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon"> <img src="images/icon-flight2.png" alt="flights"></span>
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Departure date </label>
+                                    <div class="input-group">
+
+                                        <input type="text" placeholder="Select Date" class="form-control custom-control" id="departure">
+                                        <span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin  col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Departure date </label>
+                                    <div class="input-group">
+
+                                        <input type="text" placeholder="Select Date" class="form-control custom-control" id="returning">
+                                        <span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Adults </label>
+                                    <div class="input-group">
+
+                                        <select class="selectpicker custom-select" data-style="btn-inverse">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                        </select>
+
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Child </label>
+                                    <div class="input-group">
+
+                                        <select class="selectpicker custom-select" data-style="btn-inverse">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                        </select>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class=" custom-margin2 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn">
+                                            <input type="radio" name='q2' value="Round Trip">
+                                            <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> Round Trip
+                                        </label>
+                                    </div>
+
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn">
+                                            <input type="radio" name='q2' value="One Way">
+                                            <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> One Way
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                                    <button type="submit" class="btn-green custom-margin2 ">Search Now</button>
+
+
+                                </div>
+
+
+
+                            </form>
+
+
+
+
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="02">
+                            <form>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Destination </label>
+                                    <div class="input-group">
+
+                                        <input type="text" class="form-control custom-control" placeholder="Hotel Name" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon"> <img src="images/icon-hotel2.png" alt="hotel"></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Check in date </label>
+                                    <div class="input-group">
+
+                                        <input type="text" placeholder="Select Date" class="form-control custom-control" id="departure">
+                                        <span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin  col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Check out date </label>
+                                    <div class="input-group">
+
+                                        <input type="text" placeholder="Select Date" class="form-control custom-control" id="returning">
+                                        <span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="custom-margin  col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label for="desc" class="custom-lable">Price range</label>
+                                    <div class="price">
+
+
+                                        <div id="price"></div>
+                                        <input type="text" id="amount" name="amount" readonly class="less">
+                                    </div>
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Adults </label>
+                                    <div class="input-group">
+
+                                        <select class="selectpicker custom-select" data-style="btn-inverse">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                        </select>
+
+
+                                    </div>
+                                </div>
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <label class="custom-lable">Child </label>
+                                    <div class="input-group">
+
+                                        <select class="selectpicker custom-select" data-style="btn-inverse">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                        </select>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class=" custom-margin2 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                                    <div class="checkbox">
+                                        <ul class="my-checks">
+                                            <li>
+                                                <label class="custom-lable">
+                                                    Luxury
+                                                    <input type="checkbox" value="">
+                                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="custom-lable">
+                                                    Standard
+                                                    <input type="checkbox" value="">
+                                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="custom-margin col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                                    <button type="submit" class="btn-green custom-margin2 ">Search Now</button>
+
+
+                                </div>
+
+
+
+                            </form>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="sec-pads">
+        <div class="container">
+            <div class="row">
+
+                <div class="section-title text-center">
+                    <p>What we can do for you</p>
+                    <h3 class="upper less-marging">Our Services</h3>
+                    <div class="sepo"></div>
+                </div>
+                <div class="ser-contents">
+                    <div class="services col-md-6">
+                        <ul>
+                            <li><img src="images/ticketing.png" alt="ticketing"><span>Ticketing sales and delivery direct to you</span></li>
+                            <li><img src="images/reservation.png" alt="reservation"><span>Online reservation system</span></li>
+                            <li><img src="images/countries.png" alt="countries"><span>Provide visa service for all countries</span></li>
+
+
+                        </ul>
+
+                    </div>
+                    <div class="services col-md-6">
+                        <ul>
+                            <li><img src="images/ticketing.png" alt="ticketing"><span>Ticketing sales and delivery direct to you</span></li>
+                            <li><img src="images/reservation.png" alt="reservation"><span>Online reservation system</span></li>
+                            <li><img src="images/countries.png" alt="countries"><span>Provide visa service for all countries</span></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="action-btn text-center">
+                    <a href="" class="btn-blue">Book holiday packages and cruises</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="sec-pads gray">
+        <div class="container">
+            <div class="row">
+
+                <div class="section-title text-center">
+                    <p>Take a Look at Our</p>
+                    <h3 class="upper less-marging">
+                        Most Popular Tours
+                    </h3>
+                    <div class="sepo"></div>
+                </div>
+
+                <div class="my-carousel ft-places-box ">
+                    <div id="features-places" class="owl-carousel">
+                        <div class="item ft-places">
+                            <a href="">
+                                <div class="place-thumb">
+
+                                    <div class="place-price">Starting form $1230</div>
+                                    <img src="images/spain.jpg">
+
+                                </div>
+                            </a>
+                            <div class="place-details">
+                                <ul>
+                                    <li class="name"><i class="fa fa-map-marker"></i> PARIS</li>
+                                    <li class="services"><img src="images/icon-flight3.png"> <img src="images/icon-hotel3.png"></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="item ft-places">
+                            <a href="">
+                                <div class="place-thumb">
+
+                                    <div class="place-price">Starting form $1330</div>
+                                    <img src="images/america.jpg">
+
+                                </div>
+                            </a>
+                            <div class="place-details">
+                                <ul>
+                                    <li class="name"><i class="fa fa-map-marker"></i> New York</li>
+                                    <li class="services"><img src="images/icon-flight3.png"> <img src="images/icon-hotel3.png"></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="item ft-places">
+                            <a href="">
+                                <div class="place-thumb">
+
+                                    <div class="place-price">Starting form $1230</div>
+                                    <img src="images/dubai.jpg">
+
+                                </div>
+                            </a>
+                            <div class="place-details">
+                                <ul>
+                                    <li class="name"><i class="fa fa-map-marker"></i>Beautiful Dubai</li>
+                                    <li class="services"><img src="images/icon-flight3.png"> <img src="images/icon-hotel3.png"></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+                        <div class="item ft-places">
+                            <a href="">
+                                <div class="place-thumb">
+
+                                    <div class="place-price">Starting form $1230</div>
+                                    <img src="images/turkey.jpg">
+
+                                </div>
+                            </a>
+                            <div class="place-details">
+                                <ul>
+                                    <li class="name"><i class="fa fa-map-marker"></i>Turkey </li>
+                                    <li class="services"><img src="images/icon-flight3.png"> <img src="images/icon-hotel3.png"></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="item ft-places">
+                            <a href="">
+                                <div class="place-thumb">
+
+                                    <div class="place-price">Starting form $1230</div>
+                                    <img src="images/england.jpg">
+
+                                </div>
+                            </a>
+                            <div class="place-details">
+                                <ul>
+                                    <li class="name"><i class="fa fa-map-marker"></i>England </li>
+                                    <li class="services"><img src="images/icon-flight3.png"> <img src="images/icon-hotel3.png"></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="action-btn text-center">
+                    <a href="" class="btn-blue">View All </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="dark-blue">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                <div class="sec-box">
+                    <h3 class="upper white">About us</h3>
+                    <div class="sep-green"></div>
+                    <p class="white">VOYAGER TRAVELS is an IATA (International Air Transport Association ) licensed agency run by a team of consultants with extensive experience in the travel and service industry. What sets us apart is our dedication and commitment to making your life easier when it comes to travel.We go the extra mile. </p>
+                    <p class="white">Voyager travels, is an independent specialist travel company with over 20 years experience in planning and organising millions of holidays. We specialise in online travel fulfilment services and online travel sales, we can pick any holiday/ flight from any tour operator to ensure you get the best deal around, therefore giving you the assurance of that perfect holiday from start to finish.  </p>
+                    <div class="action-btn">
+                        <a href="" class="btn-green">Know More</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+
+                <div class="my-carousel">
+                    <div id="discover" class="owl-carousel">
+                        <div class="item discover">
+
+
+
+                            <div class="over-content">
+
+
+                                <ul>
+                                    <li><i class="fa fa-location-arrow"></i></li>
+                                    <li class="dance">Discover</li>
+                                    <li class="title">CUBA</li>
+                                    <li class="sub-title">America </li>
+                                    <li><div class="sep-white"></div></li>
+                                    <li class="price">Starts From <span>$1200</span></li>
+                                    <li class="explore"><a href="" class="btn-line hvr-sweep-to-bottom">Explore</a></li>
+
+                                </ul>
+
+
+
+                            </div>
+                            <img src="images/cuba.jpg">
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="item discover">
+
+
+
+                            <div class="over-content">
+
+
+                                <ul>
+                                    <li><i class="fa fa-location-arrow"></i></li>
+                                    <li class="dance">Discover</li>
+                                    <li class="title">Paris</li>
+                                    <li class="sub-title">france</li>
+                                    <li><div class="sep-white"></div></li>
+                                    <li class="price">Starts From <span>$3200</span></li>
+                                    <li class="explore"><a href="" class="btn-line hvr-sweep-to-bottom">Explore</a></li>
+
+                                </ul>
+
+
+
+                            </div>
+                            <img src="images/paris.jpg">
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="item discover">
+
+
+
+                            <div class="over-content">
+
+
+                                <ul>
+                                    <li><i class="fa fa-location-arrow"></i></li>
+                                    <li class="dance">Discover</li>
+                                    <li class="title">kuala lumpur</li>
+                                    <li class="sub-title">Malaysia</li>
+                                    <li><div class="sep-white"></div></li>
+                                    <li class="price">Starts From <span>$2200</span></li>
+                                    <li class="explore"><a href="" class="btn-line hvr-sweep-to-bottom">Explore</a></li>
+
+                                </ul>
+
+
+
+                            </div>
+                            <img src="images/malaysia.jpg">
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-pads">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-gallery">
+
+                    <div class="section-title text-center">
+                        <p>Explore the world with us</p>
+                        <h3 class="upper less-marging">Travel Gallery</h3>
+                        <div class="sepo"></div>
+
+                        <div class="gallery">
+                            <ul>
+                                <li>
+                                    <a class="fancybox" rel="gallery1" href="images/01.jpg" title="Image Description">
+                                        <img src="images/01.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="fancybox" rel="gallery1" href="images/02.jpg" title="Image Description">
+                                        <img src="images/02.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="fancybox" rel="gallery1" href="images/america.jpg" title="Image Description">
+                                        <img src="images/america.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="fancybox" rel="gallery1" href="images/england.jpg" title="Image Description">
+                                        <img src="images/england.jpg" alt="" />
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="fancybox" rel="gallery1" href="images/turkey.jpg" title="Image Description">
+                                        <img src="images/turkey.jpg" alt="" />
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="fancybox" rel="gallery1" href="images/spain.jpg" title="Image Description">
+                                        <img src="images/spain.jpg" alt="" />
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                    <div class="section-title text-center">
+                        <p>what our customer say`s about us</p>
+                        <h3 class="upper less-marging">Tour Reviews</h3>
+                        <div class="sepo"></div>
+
+                        <div class="my-carousel">
+                            <div id="testimonials" class="owl-carousel">
+                                <div class="item testi">
+
+
+                                    <ul>
+                                        <li><img src="images/tourist.jpg"></li>
+                                        <li class="dance">Ronald David</li>
+                                        <li>The sightseeing and activities were better than we even thought! I still can’t believe we did so much in such a short time, but we did not feel stressed. We really loved the tour and would do it all over again in a minute! Thanks</li>
+
+                                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+                                <div class="item testi">
+
+
+                                    <ul>
+                                        <li><img src="images/tourist2.jpg"></li>
+                                        <li class="dance">Ronald David</li>
+                                        <li>The sightseeing and activities were better than we even thought! I still can’t believe we did so much in such a short time, but we did not feel stressed. We really loved the tour and would do it all over again in a minute! Thanks</li>
+
+                                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="sec-pads">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center outlined">Our Partners</h3>
+                <div class="my-carousel">
+                    <div id="clients" class="owl-carousel">
+                        <div class="item">
+                            <img src="images/logo-02.jpg">
+                        </div>
+
+                        <div class="item">
+                            <img src="images/logo-03.jpg">
+                        </div>
+
+                        <div class="item">
+                            <img src="images/logo-04.jpg">
+                        </div>
+
+                        <div class="item">
+                            <img src="images/logo-01.jpg">
+                        </div>
+
+                        <div class="item">
+                            <img src="images/logo-02.jpg">
+                        </div>
+
+                        <div class="item">
+                            <img src="images/logo-01.jpg">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3 class="white upper">SIGN UP FOR NEWSLETTER</h3>
+                    <h3 class="dance white">To receive our best monthly deals</h3>
+                </div>
+                <form>
+                    <div class="my-form">
+
+
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 subscribe">
+                            <div class="input-group ">
+
+                                <input type="text" class="form-control custom-control" placeholder="Enter Your Email address" aria-describedby="basic-addon2">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 clearfix ">
+                            <button type="submit" class="btn-white">SubScribe</button>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="f-pads">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <h3 class="upper">Links</h3>
+
+                    <div class="links">
+                        <ul>
+
+
+
+
+                            <li><a href="">About </a></li>
+                            <li><a href="">Corporate Travels</a></li>
+                            <li><a href="">Packages</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Terms and condtions </a></li>
+                            <li><a href="">Privacy Polciy </a></li>
+                            <li><a href="">Register </a></li>
+                            <li><a href="">Contact us</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <h3 class="upper">Contact</h3>
+
+                    <div class="Contact-list">
+                        <ul>
+
+
+
+
+                            <li><i class="fa fa fa-phone"></i>Call US <span class="b-font">08055175644 </span></li>
+                            <li><i class="fa fa fa-envelope"></i>Mail <span>hello@voyagertravels.com</span></li>
+
+                        </ul>
+
+                    </div>
+                    <div class="social-icons hidden-xs">
+                        <h3 class="dance">Follow Us</h3>
+                        <ul>
+
+                            <li class="fb"><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li class="tw"><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li class="google"><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="upper">Inquire us</h3>
+                    <div class="inquire-form">
+
+                        <form id="inquire-from" name="contact-form" method="post" action="mailer.php">
+                            <div class="form-group ">
+
+                                <input type="text" name="name" class="form-control inquire-control  " placeholder="Name" required>
+                            </div>
+                            <div class="form-group ">
+                                <input type="email" name="email" class="form-control inquire-control  " placeholder="Email" required>
+                            </div>
+
+
+
+                            <div class="form-group ">
+                                <textarea name="message" class="form-control inquire-control  " rows="2" placeholder="Message" required></textarea>
+                            </div>
+
+
+                            <button type="submit" class="btn-blue">Send</button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="footer-art"></div>
+    <div class="footer-close">
+        <div class="rights">
+            © 2015 Voyager | All right reserved <span>developed by:<a href="http://www.jospehmedia.com">josephmedia</a></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        $('.carousel').carousel({
+            interval: 5000
+        })
+    </script>
+
+
+
+    <script type="text/javascript">
+        $('#bar').scrollFix();
+    </script>
+
+    <script type="text/javascript" src="js/datepicker.js"></script>
+    <script type="text/javascript">
+        // When the document is ready
+        $(document).ready(function () {
+
+            $('#departure').datepicker({
+                format: "dd/mm/yyyy"
+            });
+
+            $('#returning').datepicker({
+                format: "dd/mm/yyyy"
+            });
+
+        });
+    </script>
+
+
+    <script>
+        jQuery(document).ready(function () {
+
+
+
+            var owl = $("#features-places");
+
+
+            owl.owlCarousel({
+                items: 4, //10 items above 1000px browser width
+                autoPlay: false,
+                navigation: true,
+                pagination: false,
+                paginationNumbers: false,
+                itemsDesktop: [1199, 4],
+                itemsDesktopSmall: [1024, 3],
+                itemsTablet: [768, 2],
+                itemsMobile: [479, 1],
+
+                navigationText: [
+             "<i class='fa fa-chevron-left'></i>",
+               "<i class='fa fa-chevron-right'></i>"
+                ],
+
+
+
+            });
+
+            var owl = $("#discover");
+
+
+            owl.owlCarousel({
+                items: 2, //10 items above 1000px browser width
+                autoPlay: true,
+                navigation: true,
+                pagination: false,
+                paginationNumbers: false,
+                itemsDesktop: [1199, 2],
+                itemsDesktopSmall: [1024, 2],
+                itemsTablet: [768, 1],
+                itemsMobile: [479, 1],
+
+                navigationText: [
+             "<i class='fa fa-chevron-left'></i>",
+               "<i class='fa fa-chevron-right'></i>"
+                ],
+
+
+
+            });
+
+            var owl = $("#testimonials");
+
+
+            owl.owlCarousel({
+                items: 1, //10 items above 1000px browser width
+                autoPlay: true,
+                navigation: false,
+                pagination: true,
+                paginationNumbers: false,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [1024, 1],
+                itemsTablet: [768, 1],
+                itemsMobile: [479, 1],
+
+
+
+
+
+            });
+
+            var owl = $("#clients");
+            owl.owlCarousel({
+                items: 5, //10 items above 1000px browser width
+                autoPlay: false,
+                navigation: true,
+                pagination: false,
+                paginationNumbers: false,
+                itemsDesktop: [1199, 4],
+                itemsDesktopSmall: [1024, 4],
+                itemsTablet: [768, 3],
+                itemsMobile: [479, 2],
+
+                navigationText: [
+             "<i class='fa fa-chevron-left'></i>",
+               "<i class='fa fa-chevron-right'></i>"
+                ],
+
+
+            });
+
+
+
+
+
+        });
+
+
+
+    </script>
+
+
+    <script>
+        $(function () {
+
+
+
+            $("#price").slider({
+                range: true,
+                min: 100,
+                max: 1000,
+                values: [0, 1000],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " -$ " + ui.values[1]);
+                }
+            });
+        });
+
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".various").fancybox({
+                maxWidth: 800,
+                maxHeight: 600,
+                fitToView: false,
+                width: '70%',
+                height: '50%',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'none',
+                closeEffect: 'none'
+            });
+
+            $(".fancybox").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none'
+            });
+        });
+
+
+    </script>
+
+
+</body>
+</html>
