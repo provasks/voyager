@@ -15,13 +15,13 @@
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Departure </label>
                     <div class="input-group">
-                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="departure" ng-model="travelInfo.departureDate">
+                        <input type="text" placeholder="Select Date" class="form-control custom-control" id="txtDepartureDate" ng-model="travelInfo.departureDate">
                     </div>
                 </div>
                 <div class="custom-margin  col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Arrival </label>
                     <div class="input-group">
-                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="rturning" ng-model="travelInfo.returnDate">
+                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="txtReturnDate" ng-model="travelInfo.returnDate">
                     </div>
                 </div>
 
@@ -46,3 +46,16 @@
         </div>
     </form>
 </section>
+
+<script>
+    $(document).ready(function () {
+        $('#txtDepartureDate').datepicker({
+            format: "dd-mm-yyyy"
+        });
+
+        $('#txtReturnDate').datepicker({
+            format: "dd-mm-yyyy"
+        });
+    });
+
+</script>

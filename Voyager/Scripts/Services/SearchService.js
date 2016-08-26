@@ -86,7 +86,6 @@ voyagerApp.service('SearchService', ['$rootScope', 'UtilityService', function ($
         return mm + '/' + dd + '/' + yyyy;
     };
     this.getAirports = function (keyword, callback) {
-        if (keyword.length < 3) return;
         var url = '/WebServices/SearchService.asmx/GetAirports';
         var data = { url: 'https://iatacodes.org/api/v6/autocomplete?', keyword: keyword }
         UtilityService.callPostAPI(url, data, callback);

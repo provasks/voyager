@@ -163,29 +163,10 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
             }
         };
 
-        //$scope.airports = $scope.getAirports();
         $scope.showDate = function (text) {
             return SearchService.flightTime(text);
         };
-        //$scope.names = ["john", "bill", "charlie", "robert", "alban", "oscar", "marie", "celine", "brad", "drew", "rebecca", "michel", "francis", "jean", "paul", "pierre", "nicolas", "alfred", "gerard", "louis", "albert", "edouard", "benoit", "guillaume", "nicolas", "joseph"];
 
-        $scope.fromAirports = [
-            { code: 'c01', value: 'Bangladesh' },
-            { code: 'c02', value: 'India' },
-            { code: 'c03', value: 'Nepal' },
-            { code: 'c04', value: 'Bhutan' },
-            { code: 'c05', value: 'Maldives' },
-            { code: 'c06', value: 'United States of America' },
-            { code: 'c07', value: 'Canada' },
-            { code: 'c08', value: 'Brazil' },
-            { code: 'c09', value: 'Argentina' },
-            { code: 'c10', value: 'Cameron' },
-            { code: 'c11', value: 'Srilanka' },
-            { code: 'c12', value: 'Burma' },
-            { code: 'c13', value: 'Switzerland' },
-            { code: 'c14', value: 'Nederlands' }
-        ];
- 
     } ]).value('travelInfo',{
         flyFrom: "",
         fromAirports:[],

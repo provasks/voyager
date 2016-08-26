@@ -54,13 +54,14 @@ div#loading {
     border: none;
 }
 
-#airports li {
+#airports ul li {
     border-bottom: 1px solid #90bade;
     padding:0px 3px;
     background-color: white;
     font-size: 12px;
+    display:flex !important;
 }
 
-#airports li:hover{
+#airports ul li:hover{
     background-color:wheat;
 }

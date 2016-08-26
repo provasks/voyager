@@ -1,17 +1,4 @@
 ﻿voyagerApp = voyagerApp || {}
-//voyagerApp.directive('autoComplete', function ($timeout) {
-//    return function (scope, iElement, iAttrs) {
-//        iElement.autocomplete({
-//            source: scope[iAttrs.uiItems],
-//            select: function () {
-//                $timeout(function () {
-//                    iElement.trigger('input');
-//                }, 0);
-//            }
-//        });
-//    };
-//});
-
 voyagerApp.directive('autoComplete', function ($timeout, $http, SearchService) {
     return {
         restrict: 'AEC',
@@ -27,8 +14,9 @@ voyagerApp.directive('autoComplete', function ($timeout, $http, SearchService) {
         link: function (scope, elem, attrs) {
             scope.current = 0;
             scope.selected = false;
-            scope.changed = function (txt) {
-                SearchService.getAirports(txt, function (response) {
+            scope.changed = function (code) {
+                if (code.length < 3) return;
+                SearchService.getAirports(code, function (response) {
                     var json = scope.removeXML(response.data);
                     if (typeof json.response == 'undefined') return;
                     scope.TypeAheadData = SearchService.mergeAirports(json.response);
