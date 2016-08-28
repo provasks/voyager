@@ -132,34 +132,34 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
 
         $scope.getLogo = function (code) {
             switch (code) {
-                case 'F9': return 'http://airlinelogos.aero/classic/FrontierAirlines01.jpg';
-                case 'UA': return 'http://airlinelogos.aero/classic/UnitedAirlines01.jpg';
-                case 'DL': return 'http://airlinelogos.aero/classic/DeltaAirLines01.jpg';
-                case 'BA': return 'https://www.seeklogo.net/wp-content/uploads/2015/07/british-airways-logo-vector-download.jpg';
-                case 'IB': return 'http://travel4free.com.au/wp-content/uploads/2014/06/iberia_logo_729.jpg';
-                case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
-                case 'UX': return 'http://aiglesias.com/wp-content/uploads/2015/07/logo-AirEuropa.png';
-                case 'AV': return 'https://thedesignair.files.wordpress.com/2013/01/logo2.png';
-                case 'TK': return 'http://image.airlineratings.com/logos/logoturkish.gif';
-                case 'TP': return 'http://www.aircargonews.com/FT11/logo_tap.jpg';
-                case 'KL': return 'http://wpdi.org/sites/default/files/klm_logo.jpg';
-                case 'AY': return 'https://gallery.finnair.com/images/cache/e1435f014e8afa5e8e393cc957ecaa97_270x180c.jpg';
-                case 'AZ': return 'http://beta.alitalia.com/il_il/Images/timone-1_tcm63-19376.jpg';
-                case 'AR': return 'http://airlinelogos.aero/classic/AerolineasArgentinas01.jpg';
-                case 'AC': return 'https://pbs.twimg.com/profile_images/459043050761621505/26D4Qt5X.png';
-                case 'LH': return 'http://voyage.rusverlag.de/wp-content/uploads/2010/09/lufthansa-logo.png';
-                case 'LA': return 'http://www.ch-aviation.com/portal/stock/1793.jpg';
-                case 'JJ': return 'http://www.fotosdigitalesgratis.com/noticias/fotos/TAM-Logo.jpg';
+                //case 'F9': return 'http://airlinelogos.aero/classic/FrontierAirlines01.jpg';
+                //case 'UA': return 'http://airlinelogos.aero/classic/UnitedAirlines01.jpg';
+                //case 'DL': return 'http://airlinelogos.aero/classic/DeltaAirLines01.jpg';
+                //case 'BA': return 'https://www.seeklogo.net/wp-content/uploads/2015/07/british-airways-logo-vector-download.jpg';
+                //case 'IB': return 'http://travel4free.com.au/wp-content/uploads/2014/06/iberia_logo_729.jpg';
                 //case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
-                //case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
-                //case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
-                //case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
-                //case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
-                //case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
+                //case 'UX': return 'http://aiglesias.com/wp-content/uploads/2015/07/logo-AirEuropa.png';
+                //case 'AV': return 'https://thedesignair.files.wordpress.com/2013/01/logo2.png';
+                //case 'TK': return 'http://image.airlineratings.com/logos/logoturkish.gif';
+                //case 'TP': return 'http://www.aircargonews.com/FT11/logo_tap.jpg';
+                //case 'KL': return 'http://wpdi.org/sites/default/files/klm_logo.jpg';
+                //case 'AY': return 'https://gallery.finnair.com/images/cache/e1435f014e8afa5e8e393cc957ecaa97_270x180c.jpg';
+                //case 'AZ': return 'http://beta.alitalia.com/il_il/Images/timone-1_tcm63-19376.jpg';
+                //case 'AR': return 'http://airlinelogos.aero/classic/AerolineasArgentinas01.jpg';
+                //case 'AC': return 'https://pbs.twimg.com/profile_images/459043050761621505/26D4Qt5X.png';
+                //case 'LH': return 'http://voyage.rusverlag.de/wp-content/uploads/2010/09/lufthansa-logo.png';
+                //case 'LA': return 'http://www.ch-aviation.com/portal/stock/1793.jpg';
+                //case 'JJ': return 'http://www.fotosdigitalesgratis.com/noticias/fotos/TAM-Logo.jpg';
+                ////case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
+                ////case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
+                ////case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
+                ////case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
+                ////case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
+                ////case 'AF': return 'http://airlinelogos.aero/classic/AirFrance_new01.jpg';
                     
-                   // 
-                case 'AA':
-                default: return 'http://airlinelogos.aero/classic/AmericanAirlines01.jpg';
+                //   // 
+                //case 'AA': return 'http://airlinelogos.aero/classic/AmericanAirlines01.jpg';
+                default: return '//images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/s/' + code + '_sq.jpg';
             }
         };
 

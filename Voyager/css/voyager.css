@@ -51,20 +51,35 @@ div#loading {
     list-style: none;
     margin: 0;
     padding: 0;
-    border: none;
+    border-collapse: collapse;
+    width:280px;
 }
 
-#airports ul li {
-    border-bottom: 1px solid #90bade;
-    padding:0px 3px;
-    background-color: white;
-    font-size: 12px;
-    display:flex !important;
-}
-
-#airports ul li:hover{
-    background-color:wheat;
-}
+    #airports ul li {
+        /*border-bottom: 1px solid #90bade;*/
+        padding: 0px 3px;
+        background-color: white;
+        font-size: 12px;
+        display: inline-block !important;
+        width: 100%;
+    }
+        #airports ul li .code {
+            width: 10%;
+            float: left;
+        }
+        #airports ul li .country {
+            width: 90%;
+            float: right;
+            text-align: right;
+        }
+        #airports ul li .name {
+            width: 100%;
+            font-weight:bold;
+            color:chocolate;
+        }
+        #airports ul li:hover {
+            background-color: wheat;
+        }
 
 
 input[type="date"] {

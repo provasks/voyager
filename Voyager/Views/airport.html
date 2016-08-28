@@ -7,7 +7,9 @@
 <div id="airports">
     <ul class="list-group table-condensed overlap" ng-hide="selected">
         <li href="javascript:void();" ng-repeat="item in TypeAheadData|unique:retkey track by $index" ng-click="handleSelection(item[retkey],item[displaykey])" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
-            {{item[subtitle]}}
+            <span class="code">{{item[retkey]}}</span> 
+            <span class="country">{{item["country_name"]}}</span>
+            <span class="name">{{item[subtitle]}}</span>
         </li>
     </ul>
 </div>
