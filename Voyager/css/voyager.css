@@ -58,27 +58,40 @@ div#loading {
     #airports ul li {
         /*border-bottom: 1px solid #90bade;*/
         padding: 0px 3px;
-        background-color: white;
         font-size: 12px;
         display: inline-block !important;
         width: 100%;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+50,b5c6d0+51,e0eff9+100;Grey+Gloss+%232 */
+        background: rgb(242,246,248); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
     }
+        #airports ul li:hover {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8ffe8+0,e3f5ab+33,b7df2d+100;Green+3D+%234 */
+            background: rgb(248,255,232); /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 33%, rgba(183,223,45,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 33%,rgba(183,223,45,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 33%,rgba(183,223,45,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+        }
         #airports ul li .code {
             width: 10%;
             float: left;
+            color:blue;
+            font-style:italic;
         }
         #airports ul li .country {
             width: 90%;
             float: right;
             text-align: right;
+            color:green;
         }
         #airports ul li .name {
             width: 100%;
-            font-weight:bold;
-            color:chocolate;
-        }
-        #airports ul li:hover {
-            background-color: wheat;
+            font-weight: bold;
+            color: chocolate;
         }
 
 

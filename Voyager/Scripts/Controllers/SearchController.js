@@ -32,7 +32,6 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
         $scope.searchResult = {};
         $scope.forms = {};
         $scope.travelInfo = travelInfo;
-        //$scope.sort = "itinerary.AirItineraryPricingInfo.ItinTotalFare.TotalFare.Amount";
         $scope.reverse = false;
         $scope.searchHotel = function () {
             alert('Searching ' + $scope.searchMode);
@@ -166,6 +165,12 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
         $scope.showDate = function (text) {
             return SearchService.flightTime(text);
         };
+        $scope.today = new Date().toISOString().split('T')[0];
+        $scope.departureDate = travelInfo.departureDate.toISOString().split('T')[0];
+        $scope.updateTravelInfo = function () {
+            $scope.departureDate = travelInfo.departureDate.toISOString().split('T')[0];
+            travelInfo.returnDate = travelInfo.departureDate.addDays(2);
+        }
 
     } ]).value('travelInfo',{
         flyFrom: "",

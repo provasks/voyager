@@ -43,7 +43,7 @@
 
                                 <div class="input-group">
                                     <input type="date" placeholder="Select Date" class="form-control custom-control"
-                                           id="departure" ng-model="travelInfo.departureDate">
+                                           id="departure" ng-model="travelInfo.departureDate" min="{{today}}" ng-change="updateTravelInfo()">
                                     <span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
 
                                 <div class="input-group">
                                     <input type="date" placeholder="Select Date" class="form-control custom-control"
-                                           id="return" ng-model="travelInfo.returnDate">
+                                           id="return" ng-model="travelInfo.returnDate" min="{{departureDate}}">
                                     <span class="input-group-addon"><i class="fa fa fa-calendar"></i></span>
                                 </div>
                             </div>
