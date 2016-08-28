@@ -7,7 +7,7 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
        , $scope.currentPage = 1
        , $scope.numPerPage = 20
        , $scope.maxSize = 5
-        , $scope.pageOptions = [
+       , $scope.pageOptions = [
             {
                 name: '10',
                 value: '10'

@@ -15,7 +15,7 @@
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Departure </label>
                     <div class="input-group">
-                        <input type="text" placeholder="Select Date" class="form-control custom-control" id="txtDepartureDate" ng-model="travelInfo.departureDate">
+                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="txtDepartureDate" ng-model="travelInfo.departureDate">
                     </div>
                 </div>
                 <div class="custom-margin  col-lg-2 col-md-2 col-sm-4 col-xs-12">
@@ -28,13 +28,14 @@
                 <div class="custom-margin col-lg-1 col-md-1 col-sm-2 col-xs-12">
                     <label class="custom-lable">Adults </label>
                     <div class="input-group">
-                        <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.adult" />
-                    </div>
+                        <input type="number" ng-model="travelInfo.adult" min="0" max="200" class="form-control custom-control" />
+                   </div>
                 </div>
                 <div class="custom-margin col-lg-1 col-md-1 col-sm-2 col-xs-12">
                     <label class="custom-lable">Kids </label>
                     <div class="input-group">
-                        <input type="number" class="form-control custom-control " data-style="btn-inverse" ng-model="travelInfo.child" />
+                        <!--<input type="number" ng-model="travelInfo.adult" min="0" max="200" />-->
+                        <input type="number" min="0" max="200" class="form-control custom-control "ng-model="travelInfo.child" />
                     </div>
                 </div>
 
@@ -47,7 +48,7 @@
     </form>
 </section>
 
-<script>
+<!--<script>
     $(document).ready(function () {
         $('#txtDepartureDate').datepicker({
             format: "dd-mm-yyyy"
@@ -58,4 +59,4 @@
         });
     });
 
-</script>
+</script>-->

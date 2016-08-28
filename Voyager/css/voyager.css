@@ -65,3 +65,46 @@ div#loading {
 #airports ul li:hover{
     background-color:wheat;
 }
+
+
+input[type="date"] {
+     -webkit-align-items: center;
+     display: -webkit-inline-flex;
+     font-family: monospace;
+     overflow: hidden;
+     padding: 0;
+     -webkit-padding-start: 1px;
+}
+
+input::-webkit-datetime-edit {
+    -webkit-flex: 1;
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    min-width: 0;
+    overflow: hidden;
+}
+
+input::-webkit-datetime-edit-fields-wrapper {
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    padding: 1px 0;
+    white-space: pre;
+}
+
+::-webkit-datetime-edit { padding: 1em; }
+::-webkit-datetime-edit-fields-wrapper { background: silver; }
+::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
+::-webkit-datetime-edit-month-field { color: blue; }
+::-webkit-datetime-edit-day-field { color: green; }
+::-webkit-datetime-edit-year-field { color: purple; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background: orange; }
+
+::-moz-datetime-edit { padding: 1em; }
+::-moz-datetime-edit-fields-wrapper { background: silver; }
+::-moz-datetime-edit-text { color: red; padding: 0 0.3em; }
+::-moz-datetime-edit-month-field { color: blue; }
+::-moz-datetime-edit-day-field { color: green; }
+::-moz-datetime-edit-year-field { color: purple; }
+::-moz-inner-spin-button { display: none; }
+::-moz-calendar-picker-indicator { background: orange; }
