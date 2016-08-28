@@ -162,14 +162,15 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
             }
         };
 
+        $scope.minDepartureDate = new Date().toISOString().split('T')[0];
+        $scope.minReturnDate = $scope.minDepartureDate;
+
         $scope.showDate = function (text) {
             return SearchService.flightTime(text);
         };
-        $scope.today = new Date().toISOString().split('T')[0];
-        $scope.departureDate = travelInfo.departureDate.toISOString().split('T')[0];
         $scope.updateTravelInfo = function () {
-            $scope.departureDate = travelInfo.departureDate.toISOString().split('T')[0];
             travelInfo.returnDate = travelInfo.departureDate.addDays(2);
+            $scope.minReturnDate = travelInfo.departureDate.toISOString().split('T')[0];
         }
 
     } ]).value('travelInfo',{

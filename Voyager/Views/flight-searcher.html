@@ -15,13 +15,13 @@
                 <div class="custom-margin col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Departure </label>
                     <div class="input-group">
-                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="txtDepartureDate" ng-model="travelInfo.departureDate" min="{{today}}" ng-change="updateTravelInfo()">
+                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="txtDepartureDate" ng-model="travelInfo.departureDate" min="{{minDepartureDate}}" ng-change="updateTravelInfo()">
                     </div>
                 </div>
                 <div class="custom-margin  col-lg-2 col-md-2 col-sm-4 col-xs-12">
                     <label class="custom-lable">Arrival </label>
                     <div class="input-group">
-                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="txtReturnDate" ng-model="travelInfo.returnDate" min="{{departureDate}}">
+                        <input type="date" placeholder="Select Date" class="form-control custom-control" id="txtReturnDate" ng-model="travelInfo.returnDate" min="{{minReturnDate}}">
                     </div>
                 </div>
 
