@@ -169,7 +169,7 @@ voyagerApp.controller('SearchController', ['$scope', 'SearchService', 'UtilitySe
             return SearchService.flightTime(text);
         };
         $scope.updateTravelInfo = function () {
-            travelInfo.returnDate = travelInfo.departureDate.addDays(2);
+            travelInfo.returnDate = travelInfo.departureDate;
             $scope.minReturnDate = travelInfo.departureDate.toISOString().split('T')[0];
         }
 
