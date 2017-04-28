@@ -7,7 +7,7 @@
         var componentPath = settings.path.components,
             sharedComponentPath = settings.path.sharedComponents;
 
-        urlRouterProvider.otherwise('cart');
+        urlRouterProvider.otherwise('home');
 
 
         var commomObj = {
@@ -31,14 +31,25 @@
                 }
             })
             //Level - 2
-            .state('cart', {
-                url: settings.links.cart,
+            // .state('cart', {
+            //     url: settings.links.cart,
+            //     parent: "base",
+            //     views: {
+            //         main: {
+            //             templateUrl: componentPath + 'shoppingCart/shoppingCartView.html',
+            //             controller: 'shoppingCartCtrl',
+            //             controllerAs: 'scc'
+            //         }
+            //     }
+            // });
+            .state('home', {
+                url: settings.links.home,
                 parent: "base",
                 views: {
                     main: {
-                        templateUrl: componentPath + 'shoppingCart/shoppingCartView.html',
-                        controller: 'shoppingCartCtrl',
-                        controllerAs: 'scc'
+                        templateUrl: componentPath + 'home/homeView.html',
+                        controller: 'homeCtrl',
+                        controllerAs: 'hc'
                     }
                 }
             });

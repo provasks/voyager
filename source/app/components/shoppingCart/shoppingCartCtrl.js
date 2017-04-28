@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function shoppingCartCtrl($scope, apiRequest, cs, gtm) {
+    function shoppingCartCtrl($scope, apiRequest, cs) {
         /***********************************************
             Variables
         ***********************************************/
@@ -98,7 +98,7 @@
                 'color': product.p_selected_color.name,
                 'style': product.p_style
             };
-            gtm.push('ProductViewed', data);
+            // gtm.push('ProductViewed', data);
         }
 
         function updateCart(oldValue, currentValue) {
@@ -112,7 +112,7 @@
             var data = {
                 'name': product.p_name,
             };
-            gtm.push('RemovedFromCart', data);
+            // gtm.push('RemovedFromCart', data);
         }
 
         function addToCart(product) {
@@ -121,7 +121,7 @@
                 quantity: product.p_quantity,
                 price: product.p_quantity * product.p_price
             };
-            gtm.push('AddToCart', data);
+            // gtm.push('AddToCart', data);
         }
 
         function init() {
@@ -138,5 +138,5 @@
     }
 
     angular.module('App').controller('shoppingCartCtrl', shoppingCartCtrl);
-    shoppingCartCtrl.$inject = ['$scope', 'apiRequest', 'commonService', 'gtmService'];
+    shoppingCartCtrl.$inject = ['$scope', 'apiRequest', 'commonService'];
 })();

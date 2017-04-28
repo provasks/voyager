@@ -10,7 +10,7 @@ var settings = {
     contentTypeTxt: "Content-Type",
     contentType: "application/json; charset=UTF-8",
     links: {
-        cart: linkInitial + 'cart',
+        home: linkInitial + 'home',
 
     },
     api: {
