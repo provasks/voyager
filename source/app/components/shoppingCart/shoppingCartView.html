@@ -1,0 +1,139 @@
+<div id="top">
+    <div class="header" ng-bind="main.lang.txtTitle"></div>
+    <div class="items">
+        <span class="count" ng-bind="scc.cart.productsInCart.length"></span>
+        <div ng-bind="main.lang.txtItem"></div>
+    </div>
+</div>
+
+<div class="shoppingCart">
+    <div class="colCaption">
+        <div class="items">
+            <span class="count" ng-bind="scc.cart.productsInCart.length"></span>
+            <div ng-bind="main.lang.txtItem"></div>
+        </div>
+        <div ng-bind="main.lang.txtSize" class="size"></div>
+        <div ng-bind="main.lang.txtQty" class="qty"></div>
+        <div ng-bind="main.lang.txtPrice" class="price"></div>
+    </div>
+    <hr class="thick" />
+    <div class="productList">
+        <div class="product" ng-repeat="product in scc.cart.productsInCart">
+            <div class="image">
+                <img src="{{main.settings.imgBase + 'T' + product.p_id + '.jpg'}}"></img>
+            </div>
+            <div class="description">
+                <div class="title">
+                    <div class="variation" ng-bind="product.p_variation"></div>
+                    <div class="name" ng-bind="product.p_name"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="style">
+                    <div class="label left" ng-bind="main.lang.txtStyle"></div>
+                    <div class="value left" ng-bind="product.p_style"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="color" ng-bind="main.lang.txtColor + product.p_selected_color.name"></div>
+                <div class="command">
+                    <a class="left" ng-bind="main.lang.lnkEdit" ng-click="scc.showEditPopup(product)"></a><span>|</span>
+                    <a class="left" ng-bind="main.lang.lnkRemove" ng-click="scc.removeItem(product)"></a><span>|</span>
+                    <a class="left" ng-bind="main.lang.lnkSave" ng-click="scc.addToCart(product)"></a>
+                </div>
+            </div>
+            <div class="size">
+                <div class="label left" ng-bind="main.lang.txtSize + ': '"></div>
+                <div class="value left" ng-bind="product.p_selected_size.code"></div>
+            </div>
+            <div class="quantity left">
+                <div class="label left" ng-bind="main.lang.txtQty + ': ' "></div>
+                <input type="number" min="1" pattern="^[0-9]*" title='Only Number' ng-model="product.p_quantity" onkeypress="return event.charCode >= 48" ng-change="scc.updateCart(oldValue, product.p_quantity)" ng-focus="oldValue=product.p_quantity"></input>
+            </div>
+            <div class="price ">
+                <div class="originalPrice " ng-if="product.p_originalprice>product.p_price">
+                    <div class="value" ng-bind="scc.padZero(product.p_originalprice)"></div>
+                    <span class="currency" ng-bind="product.c_currency"></span>
+                    <div class="clear"></div>
+                </div>
+                <div class="currentPrice">
+                    <div class="value" ng-bind="scc.padZero(product.p_price)"></div>
+                    <span class="currency" ng-bind="product.c_currency"></span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="command">
+                <a class="left" ng-bind="main.lang.lnkEdit" ng-click="scc.showEditPopup(product)"></a>
+                <span class="seperator">|</span>
+                <a class="left" ng-bind="main.lang.lnkRemove" ng-click="scc.removeItem(product)"></a>
+                <span class="seperator">|</span>
+                <a class="left" ng-bind="main.lang.lnkSave"></a>
+            </div>
+            <div class="clear"></div>
+            <hr class="thin" ng-if="($index+1)!=scc.cart.productsInCart.length" />
+        </div>
+        <hr class="thick" />
+    </div>
+</div>
+<div class="bottom">
+    <aside>
+        <ul>
+            <li class="bold" ng-bind="main.lang.txtNeedHelp"></li>
+            <li ng-bind="main.lang.txtCustomerService"></li>
+            <li class="underline" ng-bind="main.lang.txtChat"></li>
+            <li class="underline" ng-bind="main.lang.txtReturnPolicy"></li>
+        </ul>
+    </aside>
+    <div class="cartSummary">
+        <div class="promotion">
+            <div class="title" ng-bind="main.lang.txtPromotion"></div>
+            <input type="text" ng-model="scc.promotion" />
+            <button class="buttonWhite" ng-bind="main.lang.txtApply"></button>
+        </div>
+        <hr class="thick" />
+        <div class="summary" ng-if="scc.cart.productsInCart">
+            <div class="subtotal">
+                <div class="left title" ng-bind="main.lang.txtSubtotal"></div>
+                <div class="value right" ng-bind="scc.getSubtotal(scc.cart.productsInCart)"></div>
+                <div class="superscript right">$</div>
+            </div>
+            <div class="clear"></div>
+            <div class="dicount" ng-if="scc.discount>0">
+                <div class="left title" ng-bind="main.lang.txtDiscount"></div>
+                <div class="value right" ng-bind="scc.discount"></div>
+                <div class="superscript right">$</div>
+                <div class="right">-</div>
+            </div>
+            <div class="clear"></div>
+            <div class="shipping">
+                <div class="left title" ng-bind="main.lang.txtShipping"></div>
+                <div ng-if="scc.isFreeShipping">
+                    <div class="right" ng-bind="main.lang.txtFree"></div>
+                    <div class="clear"></div>
+                    <div class="desk left msg" ng-bind="main.lang.txtShippingQualifyMsg"></div>
+                    <div class="mob left msg" ng-bind="main.lang.txtShippingQualifyMobMsg"></div>
+
+                </div>
+                <div ng-if="!scc.isFreeShipping">
+                    <div class="value right" ng-bind="scc.shippingCost"></div>
+                    <div class="superscript right">$</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr class="thin" />
+            <div class="total">
+                <div class="left title" ng-bind="main.lang.txtTotal"></div>
+                <div class="right value" ng-bind="scc.total"></div>
+                <div class="superscript right">$</div>
+                <div class="clear"></div>
+                <div class="left msg" ng-bind="main.lang.txtTotalMsg"></div>
+            </div>
+            <hr class="thick desk" />
+            <button class="button" ng-bind="main.lang.txtCheckout"></button>
+            <button class="buttonLink" ng-bind="main.lang.txtContinue"></button>
+        </div>
+        <div class="security">
+            <div class="msg" ng-bind="main.lang.txtSecureMsg"></div>
+            <img class="lock" src="{{main.settings.imgBase + 'lock.jpg'}}" />
+        </div>
+    </div>
+</div>
+<product-detail-popup ng-if="main.showProductDetial"></product-detail-popup>

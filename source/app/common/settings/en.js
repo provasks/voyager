@@ -1,0 +1,36 @@
+"use strict";
+var en = {
+    thankYouTxt: 'Thank you very much',
+    notifySoonTxt: 'See you :)',
+    txtTitle: "your shopping bag",
+    txtItem: "items",
+    txtSize: "size",
+    txtQty: "qty",
+    txtPrice: "price",
+    txtStyle: "Style #: ",
+    txtColor: "Colour: ",
+    lnkEdit: "edit",
+    lnkRemove: "x remove",
+    lnkSave: "save for later",
+    txtNeedHelp: "Need help or have questions",
+    txtCustomerService: "Call Customer Service at 1-800-555-5555",
+    txtChat: "Chat with one of our stttylists",
+    txtReturnPolicy: "See return & exchange policy",
+    txtPromotion: "Enter Promotion code or gift card",
+    txtApply: "Apply",
+    txtSubtotal: "Subtotal",
+    txtDiscount: "Promotion code jf10 applied",
+    txtShipping: "Estimated shipping*",
+    txtFree: "FREE",
+    txtShippingQualifyMsg: "You qualify for the free shipping because your order is over $50",
+    txtShippingQualifyMobMsg: "You spent $50, so You qualify for the free shipping*",
+    txtTotal: "Estimated Total",
+    txtTotalMsg: "Tax will be applied during checkout",
+    shippingCost: 10,
+    txtContinue: 'Continue Shopping',
+    txtCheckout: "Checkout",
+    txtSecureMsg: "Secure checkout. Shopping is always safe & secure",
+    lnkProductDetail: "See product details"
+
+};
+var lang = en;

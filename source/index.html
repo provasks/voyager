@@ -1,0 +1,88 @@
+<!doctype html>
+<html ng-app="App" lang="en" ng-controller="mainCtrl as main">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Cart Sample</title>
+    <!-- <base href="/"> -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- build:css(.tmp) assets/css/main.css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- endbuild -->
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NRSMQNF');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRSMQNF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+
+    <div id="left"></div>
+    <div id="middle">
+        <header ui-view="header"></header>
+        <main ui-view="content"></main>
+        <footer ui-view="footer"></footer>
+    </div>
+    <div id="right"></div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,source}) scripts/scripts.js -->
+    <!-- settings -->
+    <script src="app/common/settings/settings.js"></script>
+    <!--<script src="app/common/settings/en.js"></script>-->
+    <!-- app -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <!-- other supporting lib files -->
+    <!-- modules -->
+    <!-- constants -->
+    <script src="app/common/settings/en.js"></script>
+    <!-- services -->
+    <script src="app/common/services/apiService.js"></script>
+    <script src="app/common/services/commonService.js"></script>
+    <script src="app/common/services/gtmService.js"></script>
+    <!-- directives -->
+    <script src="app/common/directives/popUp/popUp.js"></script>
+    <!-- filters -->
+    <!-- controllers -->
+    <script src="app/common/main/mainCtrl.js"></script>
+    <script src="app/components/shoppingCart/shoppingCartCtrl.js"></script>
+    <script src="app/components/shoppingCart/directives/productDetailPopup/productDetailCtrl.js"></script>
+    <script src="app/components/shoppingCart/directives/productDetailPopup/productDetailPopup.js"></script>
+
+    <!-- endbuild -->
+</body>
+
+</html>
